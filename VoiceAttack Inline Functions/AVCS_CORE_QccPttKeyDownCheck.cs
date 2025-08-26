@@ -4,11 +4,8 @@
     using System.Threading;
 
     /*
-    Required Assemblies in VoiceAttack V1:
-    Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.Linq.Expressions.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll;System.Linq.dll
-
-    Required Assemblies in VoiceAttack V2:
-    Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.Linq.Expressions.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll;System.Linq.dll
+    Required Assemblies in VoiceAttack V1 and V2:
+    Microsoft.CSharp.dll;System.dll
     */
 
     /// <summary>

@@ -15,17 +15,17 @@
 <br />
 <br />
 
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV TOOLKIT Profile for VoiceAttack](https://i.imgur.com/YYHF4pl.png)](https://veterans-gaming.com/avcs)
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV TOOLKIT Profile for VoiceAttack](https://i.imgur.com/YYHF4pl.png)](https://veterans-gaming.com/avcs)
 <br /><br />
 
 **The AVCS CORE VoiceAttack Profile is my framework for the game profiles I create, such as my Falcon BMS Radio Commands profile and my Ready or Not Radio Commands profile.  It provides common operations relatively executed in the active game profile, and handles profile initialization and updates to required configuration and resource files, allowing me to more easily maintain my family of AVCS profiles for either VoiceAttack V1 or V2 users. This repository presents the DEV TOOLKIT profile I use and an open source reference to all my precompiled inline functions and used within my AVCS profiles.**
 
 <br /><br />
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard1](https://i.imgur.com/OnCM8k0.png)](https://i.imgur.com/Rtdmnt2.png)
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard1](https://i.imgur.com/OnCM8k0.png)](https://i.imgur.com/Rtdmnt2.png)
  <br />
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard2](https://i.imgur.com/lfIwHrA.png)](https://i.imgur.com/IAdxdHl.png)
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard2](https://i.imgur.com/lfIwHrA.png)](https://i.imgur.com/IAdxdHl.png)
  <br />
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard3](https://i.imgur.com/hy7NeQH.png)](https://i.imgur.com/URjnE5G.png)
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard3](https://i.imgur.com/hy7NeQH.png)](https://i.imgur.com/URjnE5G.png)
 <br /><br />
 ### &nbsp; - General Command Reference -
 
@@ -44,9 +44,10 @@ Say, "Open the Help Menu", to view a list of common help actions, including a di
 
 # Getting Started
 
-The AVCS CORE Profile for VoiceAttack can work as a standalone profile, but is required by any AVCS4 profile I release including AVCS4 BMS Radios and AVCS4 Ready or Not profiles.  AVCS CORE will operate in any version of VoiceAttack (at least v1.16 or higher), **including VoiceAttack V2**.  Check the 'extras' folder in the extracted download package for an optional template profile you can modify for yourself to use a "AVCS CORE" powered profile all of your own.  This is the profile which I modify for personal day-to-day use in Windows when not playing games.  The included readme file alongside it provides details and instructions for using this optional template profile.
+The AVCS CORE Profile for VoiceAttack can work as a standalone profile, but is required by any AVCS4 profile I release including AVCS4 BMS Radios and AVCS4 Ready or Not profiles.  AVCS CORE will operate in any version of VoiceAttack (at least v1.16 or higher), **including VoiceAttack V2**.  Check the 'extras' folder in the extracted download package for an optional template profile you can modify for yourself to use an "AVCS CORE" powered profile all of your own.  This is the profile which I modify for personal day-to-day use in Windows when not playing games.  The included readme file alongside it provides details and instructions for using this optional template profile.
 <br /><br />
-First, download the "AVCS CORE (2.0).zip" package from the link below - never download this file from anywhere else, or from others, as it should exactly match the checksum below for safety, security, and peace of mind.  Extract the contents of this `.zip` package somewhere, and open the folder "AVCS CORE (2.0)" - inside you will find the "AVCS CORE (v2.0) Profile (IMPORT THIS).vax" profile package. As the name suggests, you import this into VoiceAttack.<br /><br />
+First, download the `AVCS CORE (2.0).zip` package from the link below - never download this file from anywhere else, or from others, as it should exactly match the checksum below for safety, security, and peace of mind.  Extract the contents of this `.zip` package somewhere, and open the folder "AVCS CORE (2.0)" - inside you will find the `AVCS CORE (v2.0) Profile (IMPORT THIS).vax` profile package. As the name suggests, you import this into VoiceAttack.<br /><br />
+#### *AVCS CORE v2.0 (and higher) will never require VoiceAttack to run "As Administrator"
 <br /><br />
 *(the sample image below is from private .vax beta build and may not match checksum below it which is always accurate)*
 <br />
@@ -113,16 +114,26 @@ SHA512: 94e991d16f373d86c70fe2d692edd9b75a35725a151f9f4870a9cf1100eea703ad18954f
 
 ---
 
-### AVCS CORE DEV TOOLKIT Profile and App
+ &nbsp; &nbsp; &nbsp; | &nbsp; [(back to top)](#) &nbsp; |
 
-This repro includes a tool that provides a simple application for testing parts of my inlines in Visual Studio, which is where I do most of my development and proof of concept testing before bringing them into VoiceAttack. The included profile 'AVCS CORE DEV TOOLKIT (v2.0)-Profile.vap' is the same tool I use to build all precompiled inline functions, and prepare updates to AVCS CORE.  This app also provides a means for end users to validate my compiled inline functions against the hashtable which is downloaded alongside them.
+<br /><br />
+
+# AVCS CORE DEV TOOLKIT Profile and App
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV](https://i.imgur.com/zufYa79.png)](#)
+
+This repro includes a tool that provides a simple application for testing parts of my inlines in Visual Studio, which is where I do most of my development and proof of concept testing before bringing them into VoiceAttack. The included profile `AVCS CORE DEV TOOLKIT (v2.0)-Profile.vap` is the same tool I use to build all precompiled inline functions, and prepare updates to AVCS CORE.  This app also provides a means for end users to validate my compiled inline functions against the hashtable which is downloaded alongside them.
 <br />
 
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV TOOLKIT Profile for VoiceAttack](https://i.imgur.com/1uTFeSz.png)](https://veterans-gaming.com/avcs)
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV TOOLKIT Profile for VoiceAttack](https://i.imgur.com/1uTFeSz.png)](https://veterans-gaming.com/avcs)
+
+<br /><br />
+In time, this repository may expand to include a larger 
 <br /><br />
 
 ---
 
+<br /><br />
 
 # AVCS CORE Framework Profile for VoiceAttack
 

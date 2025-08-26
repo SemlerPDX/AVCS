@@ -5,11 +5,13 @@
     using System.Security.Cryptography;
     using System.Windows.Forms;
 
-    // Required Referenced Assemblies V1:
-    //Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
+    /*
+    Required Referenced Assemblies V1:
+    Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
 
-    // Required Referenced Assemblies V2:
-    // Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Security.Cryptography.dll;System.ComponentModel.Primitives.dll;System.Data.DataSetExtensions.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll; System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
+    Required Referenced Assemblies V2:
+    Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Security.Cryptography.dll;System.ComponentModel.Primitives.dll;System.Data.DataSetExtensions.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll; System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
+    */
 
     /// <summary>
     /// AVCS4 Falcon Menu Dat Parser - Automatic Radio Command and HTML Reference Guide Generator
@@ -87,7 +89,7 @@
             );
         }
 
-        private string PickFolder(string rootFolder = null)
+        private string PickFolder(string rootFolder = "")
         {
             using (var dlg = new FolderBrowserDialog())
             {
@@ -108,8 +110,6 @@
                     return "cancelled";
                 }
             }
-
-            return null;
         }
 
         private string GetFileHash(string filePath)

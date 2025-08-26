@@ -3,12 +3,6 @@ Namespace AVCS_CORE_QccPttGetButton
 	'  by SemlerPDX Jan2021/Oct2021
 	'  VETERANS-GAMING.COM
 
-	' V1 Required Referenced Assemblies:
-	' System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.ComponentModel.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
-
-	' V2 Required Referenced Assemblies:
-	' System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.ComponentModel.dll;System.ComponentModel.TypeConvertor.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
-
 	Imports Microsoft.VisualBasic
 	Imports System
 	Imports System.Collections
@@ -19,6 +13,8 @@ Namespace AVCS_CORE_QccPttGetButton
 	Imports System.Threading.Tasks
 	Imports System.Windows.Forms
 
+	' Required Referenced Assemblies V1 and V2:
+	' System.dll;System.Windows.Forms.dll
 
 	Public Class VAInline
 		Dim mouseButtons() As String = {"STATE_LEFTMOUSEBUTTON", "STATE_RIGHTMOUSEBUTTON", "STATE_MIDDLEMOUSEBUTTON", "STATE_FORWARDMOUSEBUTTON", "STATE_BACKMOUSEBUTTON"}
@@ -648,5 +644,4 @@ Namespace AVCS_CORE_QccPttGetButton
 		End Function
 
 	End Class
-
 End Namespace

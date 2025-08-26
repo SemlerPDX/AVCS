@@ -8,11 +8,8 @@
     using System.Windows.Forms;
 
     /*
-    Required Referenced Assemblies V1:
-    System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.ComponentModel.TypeConverter.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
-
-    Required Referenced Assemblies V2:
-    System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.ComponentModel.TypeConverter.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
+    Required Referenced Assemblies V1 and V2:
+    System.dll;System.Core.dll;System.ComponentModel.TypeConverter.dll;System.Windows.Forms.dll
     */
 
     public class VAInline

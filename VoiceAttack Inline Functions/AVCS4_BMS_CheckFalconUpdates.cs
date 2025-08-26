@@ -4,11 +4,13 @@
     using System.IO;
     using System.Security.Cryptography;
 
-    // Required Referenced Assemblies V1:
-    //Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll; System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
+    /*
+    Required Referenced Assemblies V1:
+    Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
 
-    // Required Referenced Assemblies V2:
-    // Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Security.Cryptography.dll;System.Data.DataSetExtensions.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll; System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
+    Required Referenced Assemblies V2:
+    Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Security.Cryptography.dll;System.Data.DataSetExtensions.dll;System.Deployment.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll
+    */
 
     /// <summary>
     /// AVCS4 Falcon Menu Dat Updates Check - Automatic Radio Commands Update Check based on Falcon game updates
