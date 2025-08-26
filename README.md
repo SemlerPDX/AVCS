@@ -208,7 +208,7 @@ In time, this repository may expand to include a larger guide not only for AVCS 
 
 ## Troubleshooting
 
-Every command and function has been thoroughly tested, and most any exceptions or errors have been discovered and accounted for, with a profile command or inline function call gracefully ending and informing us of the error(s) through the VoiceAttack Event Log. If something goes wrong, the `AVCS_ERROR` boolean variable will become `True`, and an error message will be printed to the event log. When the debugging boolean variable has been set to True, depending on the debugging level set, errors may also be written to the errors log located in the AVCS profiles folder at `%AppData%\VoiceAttack-AVCS Profiles\AVCS\core_errors.log`. I have included a utility voice command to end any running commands including any profile commands currently active, just say `"Stop all commands"`.
+Every command and function has been thoroughly tested, and most any exceptions or errors have been discovered and accounted for, with a profile command or inline function call gracefully ending and informing us of the error(s) through the VoiceAttack Event Log. If something goes wrong, the `AVCS_ERROR` boolean variable will become `True`, and an error message will be printed to the event log. When the debugging boolean variable has been set to True, depending on the debugging level set, errors may also be written to the errors log. I have included a utility voice command to end any running commands including any profile commands currently active, just say `"Stop all commands"`.
 
 <br /><br />
 
