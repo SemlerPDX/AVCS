@@ -18,7 +18,7 @@
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV TOOLKIT Profile for VoiceAttack](https://i.imgur.com/YYHF4pl.png)](https://veterans-gaming.com/avcs)
 <br /><br />
 
-**The AVCS CORE VoiceAttack Profile is my framework for the game profiles I create, such as my Falcon BMS Radio Commands profile and my Ready or Not Radio Commands profile.  It provides common operations relatively executed in the active game profile, and handles profile initialization and updates to required configuration and resource files, allowing me to more easily maintain my family of AVCS profiles for either VoiceAttack V1 or V2 users. This repository presents the DEV TOOLKIT profile I use and an open source reference to all my precompiled inline functions and used within my AVCS profiles.**
+**The AVCS CORE VoiceAttack Profile is my framework for the game profiles I create, such as my Falcon BMS Radio Commands profile and my Ready or Not Radio Commands profile.  It provides common operations relatively executed in the active game profile, and handles profile initialization and updates to required configuration and resource files, allowing me to more easily maintain my family of AVCS profiles for either VoiceAttack V1 or V2 users. This repository presents the DEV TOOLKIT profile I use to build my precompiled inline functions used within my AVCS profiles, as well as an open source reference to them (given that they cannot be reviewed once compiled).**
 
 <br /><br />
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard1](https://i.imgur.com/OnCM8k0.png)](https://i.imgur.com/Rtdmnt2.png)
