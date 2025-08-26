@@ -239,12 +239,12 @@ The <a href="https://voiceattack.com/VoiceAttackHelp.pdf">VoiceAttack Manual</a>
 <br />
 
 
-By default, error log entries are not written unless a debug mode of level 2 or 3 is enabled.  Each error will be preceded by a timestamp and a debug line entry from the action list where it originated. There may be some complex information about the command which executed, any sub-command chains, and all sorts of data I would not expect anyone to understand.  You can present error logs to me and I'll be happy to find where the issue has occurred.  Just say, "Create a Bug Report", and follow the prompts to use the command which caused an issue, and then say, "Ready", or "Done", when it is complete (or errored out) to save the report.  A browser will open where you can paste this report - feel free to review before posting, there should never be any identifying or sensitive information included.
+By default, error log entries are not written unless a debug mode of level 2 or 3 is enabled.  Each error will be preceded by a timestamp and a debug line entry from the action list where it originated. There may be some complex information about the command which executed, any sub-command chains, and all sorts of data I would not expect anyone to understand.  You can present error logs to me and I'll be happy to find where the issue has occurred.  Just say, `"Create a Bug Report"`, and follow the prompts to use the command which caused an issue, and then say, `"Ready"`, or `"Done"`, when it is complete (or errored out) to save the report.  A browser will open where you can paste this report - feel free to review before posting, there should never be any identifying or sensitive information included.
 
 <br />
 
 
-You may also enable debugging mode, if desired, such as saying, "Enable Debug Mode Level 4", for message printing without writing to file.  By enabling debugging, a larger amount of data will be printed to the VoiceAttack Event Log, which will be the same as what is printed in the errors log file. If it is not apparent what went wrong, you can always contact me and I'll do my best to help out.
+You may also enable debugging mode, if desired, such as saying, `"Enable Debug Mode Level 4"`, for message printing without writing to file.  By enabling debugging, a larger amount of data will be printed to the VoiceAttack Event Log, which will be the same as what is printed in the errors log file. If it is not apparent what went wrong, you can always contact me and I'll do my best to help out.
 
 <br /><br />
 
@@ -257,4 +257,4 @@ I am happy to support this profile and folks using it, contact me wherever is mo
 
 <br />
 
- &nbsp; &nbsp; &nbsp; | &nbsp; [(back to top)](#) &nbsp; |
+ &nbsp; &nbsp; &nbsp; | &nbsp; [(back to top)](https://github.com/SemlerPDX/AVCS) &nbsp; |
