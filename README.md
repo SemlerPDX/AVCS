@@ -21,15 +21,17 @@
 **The AVCS CORE VoiceAttack Profile is my framework for the game profiles I create, such as my Falcon BMS Radio Commands profile and my Ready or Not Radio Commands profile.  It provides common operations relatively executed in the active game profile, and handles profile initialization and updates to required configuration and resource files, allowing me to more easily maintain my family of AVCS profiles for either VoiceAttack V1 or V2 users. This repository presents the DEV TOOLKIT profile I use and an open source reference to all my precompiled inline functions and used within my AVCS profiles.**
 
 <br /><br />
- &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard1](https://i.imgur.com/OnCM8k0.png)](https://i.imgur.com/Rtdmnt2.png) &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard2](https://i.imgur.com/lfIwHrA.png)](https://i.imgur.com/IAdxdHl.png)
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard1](https://i.imgur.com/OnCM8k0.png)](https://i.imgur.com/Rtdmnt2.png)
+ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard2](https://i.imgur.com/lfIwHrA.png)](https://i.imgur.com/IAdxdHl.png)
  <br />
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard3](https://i.imgur.com/hy7NeQH.png)](https://i.imgur.com/URjnE5G.png)
 <br /><br />
-### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - General Command Reference -
+### &nbsp; - General Command Reference -
 
 Say, "Open the Command Reference", to view complete list of voice commands in AVCS CORE Framework profile and available to the included Template Profile.
 <br /><br />
-### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Get Help -
+### &nbsp; - Get Help -
 
 Say, "Open the Help Menu", to view a list of common help actions, including a direct link to Discord help and support channel for AVCS profiles.
 
@@ -45,10 +47,9 @@ Say, "Open the Help Menu", to view a list of common help actions, including a di
 The AVCS CORE Profile for VoiceAttack can work as a standalone profile, but is required by any AVCS4 profile I release including AVCS4 BMS Radios and AVCS4 Ready or Not profiles.  AVCS CORE will operate in any version of VoiceAttack (at least v1.16 or higher), **including VoiceAttack V2**.  Check the 'extras' folder in the extracted download package for an optional template profile you can modify for yourself to use a "AVCS CORE" powered profile all of your own.  This is the profile which I modify for personal day-to-day use in Windows when not playing games.  The included readme file alongside it provides details and instructions for using this optional template profile.
 <br /><br />
 First, download the "AVCS CORE (2.0).zip" package from the link below - never download this file from anywhere else, or from others, as it should exactly match the checksum below for safety, security, and peace of mind.  Extract the contents of this `.zip` package somewhere, and open the folder "AVCS CORE (2.0)" - inside you will find the "AVCS CORE (v2.0) Profile (IMPORT THIS).vax" profile package. As the name suggests, you import this into VoiceAttack.<br /><br />
-
-        (the sample image below is from private .vax beta build and
-         may not match checksum below it which is always accurate)
-
+<br /><br />
+*(the sample image below is from private .vax beta build and may not match checksum below it which is always accurate)*
+<br />
 <br /><br />
 ## Download the AVCS CORE Profile
 
@@ -95,7 +96,7 @@ SHA512: 94e991d16f373d86c70fe2d692edd9b75a35725a151f9f4870a9cf1100eea703ad18954f
 
 <br />
 
-### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Check out my entire family of AVCS Profiles for Voiceattack -
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Check out my entire family of AVCS Profiles for Voiceattack -
 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS Profiles for VoiceAttack](https://i.imgur.com/FO3fiFF.png)](https://veterans-gaming.com/avcs)
 <br /><br />
