@@ -118,9 +118,7 @@ SHA512: 94e991d16f373d86c70fe2d692edd9b75a35725a151f9f4870a9cf1100eea703ad18954f
 
 <br /><br />
 
-# AVCS CORE DEV TOOLKIT Profile and App
-
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV](https://i.imgur.com/zufYa79.png)](#)
+# [![AVCS CORE DEV](https://i.imgur.com/zufYa79.png)](#) AVCS CORE DEV TOOLKIT Profile and App
 
 This repro includes a tool that provides a simple application for testing parts of my inlines in Visual Studio, which is where I do most of my development and proof of concept testing before bringing them into VoiceAttack. The included profile `AVCS CORE DEV TOOLKIT (v2.0)-Profile.vap` is the same tool I use to build all precompiled inline functions, and prepare updates to AVCS CORE.  This app also provides a means for end users to validate my compiled inline functions against the hashtable which is downloaded alongside them.
 <br />
@@ -128,7 +126,7 @@ This repro includes a tool that provides a simple application for testing parts 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV TOOLKIT Profile for VoiceAttack](https://i.imgur.com/1uTFeSz.png)](https://veterans-gaming.com/avcs)
 
 <br /><br />
-In time, this repository may expand to include a larger 
+In time, this repository may expand to include a larger guide not only for AVCS CORE, but use of this ToolKit profile, app, and even AVCS4 game profiles which require AVCS CORE.  The Wiki pages in this repo will be linked to from this readme if/when documentation is produced on a larger scale.  For now, this will simply serve as an open source reference for users of my AVCS CORE powered VoiceAttack profiles.
 <br /><br />
 
 ---
