@@ -36,11 +36,19 @@ Say, "Open the Command Reference", to view complete list of voice commands in AV
 Say, "Open the Help Menu", to view a list of common help actions, including a direct link to Discord help and support channel for AVCS profiles.
 
 
-<br />
-
-
+<br /><br />
 
 ---
+
+### &nbsp; &nbsp; &nbsp; AVCS Profiles for VoiceAttack are the product of 5+ years of development and testing.
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![Support me on Patreon](https://i.imgur.com/DWOV1kw.png)](https://www.patreon.com/SemlerPDX) &nbsp; &nbsp; &nbsp; [![Donate at PayPal](https://i.imgur.com/fgrCUPF.png)](https://veterans-gaming.com/semlerpdx/donate/) &nbsp; &nbsp; &nbsp; [![Buy me a Coffee](https://i.imgur.com/MkmhDDa.png)](https://www.buymeacoffee.com/semlerpdx)
+
+## &nbsp; &nbsp; &nbsp; Support is greatly appreciated and highly encouraging! Thank you!
+
+---
+
+<br /><br />
 
 # Getting Started
 
@@ -101,16 +109,6 @@ SHA512: 94e991d16f373d86c70fe2d692edd9b75a35725a151f9f4870a9cf1100eea703ad18954f
 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS Profiles for VoiceAttack](https://i.imgur.com/FO3fiFF.png)](https://veterans-gaming.com/avcs)
 <br /><br />
-
----
-
-### &nbsp; &nbsp; &nbsp; AVCS Profiles for VoiceAttack are the product of 5+ years of development and testing.
-
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![Support me on Patreon](https://i.imgur.com/DWOV1kw.png)](https://www.patreon.com/SemlerPDX) &nbsp; &nbsp; &nbsp; [![Donate at PayPal](https://i.imgur.com/fgrCUPF.png)](https://veterans-gaming.com/semlerpdx/donate/) &nbsp; &nbsp; &nbsp; [![Buy me a Coffee](https://i.imgur.com/MkmhDDa.png)](https://www.buymeacoffee.com/semlerpdx)
-
-## &nbsp; &nbsp; &nbsp; Support is greatly appreciated and highly encouraging! Thank you!
- 
-<br />
 
 ---
 
