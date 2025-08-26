@@ -1,4 +1,3 @@
-// Makes the VAStatics.VA field visible everywhere as just `VA` (a value).
 using System.Diagnostics;
 
 namespace AVCS
