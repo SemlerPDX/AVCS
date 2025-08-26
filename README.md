@@ -3,7 +3,7 @@
 
 |  AVCS Profiles VoiceAttack Compatibility Chart | Works In | Works In |  VoiceAttack must be            |
 |------------------------------------------|:--------:|:------:|:-----------------------:|
-| Valid Profile Combinations                     | VA v1.x+ | VA v2+ |     run as Administrator     |
+| Valid Profile Combinations                     | VA v1.16+ | VA v2+ |     run as Administrator     |
 | AVCS CORE v1.11 + AVCS4 Falcon BMS Radios v1.43        | ✅       | ❌     | ✅                       |
 | AVCS CORE v2.0 + AVCS4 Falcon BMS Radios v2.0        | ✅       | ✅     | ❌                       |
 
