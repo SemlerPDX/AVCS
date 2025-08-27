@@ -265,7 +265,6 @@
             }
             finally
             {
-                VA.SetText("AVCS_BUILD", null);
                 VA.SetText("AVCS_CHECKSUMS", null);
                 VA.SetText("AVCS_CHANGELOG", null);
                 VA.SetBoolean("AVCS_UPDATE_PENDING", null);
