@@ -113,9 +113,9 @@
 
         /// <summary>
         /// Local location of all AVCS CORE resources (though sounds will be moved to a sounds folder and ignored).<br/>
-        /// AvcsAppsSounds = @"AVCS\sounds\avcs"
+        /// AvcsAppsSounds = @"AVCS\sounds"
         /// </summary>
-        private static readonly string AvcsAppsSounds = @"AVCS\sounds\avcs";
+        private static readonly string AvcsAppsSounds = @"AVCS\sounds";
 
         /// <summary>
         /// AvcsAppsProfilesFile = @"AVCS\avcs_profiles.txt"
@@ -178,7 +178,7 @@
 
         /// <summary>
         /// Fully qualified path to all AVCS sounds. Due to V1 migration, nested 'avcs' folder is required.  Example folder path value:<br/>
-        /// AvcsResourcesDirectory = @"..\AppData\Roaming\VoiceAttack-AVCS Profiles\AVCS\sounds\avcs"
+        /// AvcsResourcesDirectory = @"..\AppData\Roaming\VoiceAttack-AVCS Profiles\AVCS\sounds"
         /// </summary>
         private static string AvcsSoundsDirectory { get; set; }
 
