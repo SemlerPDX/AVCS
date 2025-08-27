@@ -117,7 +117,7 @@ SHA512: 94e991d16f373d86c70fe2d692edd9b75a35725a151f9f4870a9cf1100eea703ad18954f
 
 <br /><br />
 
-# [![AVCS CORE DEV](https://i.imgur.com/zufYa79.png)](#) AVCS CORE DEV TOOLKIT Profile and App
+# [![AVCS CORE DEV](https://i.imgur.com/MALFyeX.png)](#) AVCS CORE DEV TOOLKIT Profile and App
 
 This repository includes a tool that provides a simple application for testing parts of my inlines in Visual Studio, which is where I do most of my development and proof of concept testing before bringing them into VoiceAttack. The included profile `AVCS CORE DEV TOOLKIT (v2.0)-Profile.vap` is the same tool I use to build all precompiled inline functions, and prepare updates to AVCS CORE.  This app also provides a means for end users to validate my compiled inline functions against the hashtable which is downloaded alongside them.
 <br />
