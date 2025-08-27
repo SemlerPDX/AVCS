@@ -16,11 +16,14 @@
 <br />
 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE DEV TOOLKIT Profile for VoiceAttack](https://i.imgur.com/YYHF4pl.png)](https://veterans-gaming.com/avcs)
-<br /><br />
+<br /><br /><br />
+**This repository presents the DEV TOOLKIT profile I use to build my precompiled VoiceAttack inline functions used within my AVCS profiles, which are updated and maintained by AVCS CORE, as well as an open source reference to them given that inline functions cannot be reviewed once compiled.**
+<br />
+**The AVCS CORE VoiceAttack Profile is my framework for the game profiles I create, such as my Falcon BMS Radio Commands profile and my Ready or Not Radio Commands profile.  It provides common operations relatively executed in the active game profile such as handling profile initialization, save file management, updates to required configuration and resource files, and much more.**
+<br />
+**As a centralized hub profile utilizing external config files and resources not baked into the actual profile(s), CORE allows me to more easily maintain my family of AVCS profiles for either VoiceAttack V1 or V2 users. The CORE updater systems reduce the need for a new profile download/import into VoiceAttack for most updates or patches to my voice commands and systems, adding to QoL and ease of use for end users as well as the developer (me).**
 
-**The AVCS CORE VoiceAttack Profile is my framework for the game profiles I create, such as my Falcon BMS Radio Commands profile and my Ready or Not Radio Commands profile.  It provides common operations relatively executed in the active game profile, and handles profile initialization and updates to required configuration and resource files, allowing me to more easily maintain my family of AVCS profiles for either VoiceAttack V1 or V2 users. This repository presents the DEV TOOLKIT profile I use to build my precompiled inline functions used within my AVCS profiles, as well as an open source reference to them (given that they cannot be reviewed once compiled).**
-
-<br /><br />
+<br /><br /><br />
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard1](https://i.imgur.com/OnCM8k0.png)](https://i.imgur.com/Rtdmnt2.png)
  <br />
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![AVCS CORE Infocard2](https://i.imgur.com/lfIwHrA.png)](https://i.imgur.com/IAdxdHl.png)
