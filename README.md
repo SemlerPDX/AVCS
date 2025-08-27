@@ -60,9 +60,6 @@ The AVCS CORE Profile for VoiceAttack can work as a standalone profile, but is r
 First, download the `AVCS CORE (2.0).zip` package from the link below - never download this file from anywhere else, or from others, as it should exactly match the checksum below for safety, security, and peace of mind.  Extract the contents of this `.zip` package somewhere, and open the folder "AVCS CORE (2.0)" - inside you will find the `AVCS CORE (v2.0) Profile (IMPORT THIS).vax` profile package. As the name suggests, you import this into VoiceAttack.<br /><br />
 #### *AVCS CORE v2.0 (and higher) will never require VoiceAttack to run "As Administrator"
 <br /><br />
-*(the sample image below is from private .vax beta build and may not match checksum below it which is always accurate)*
-<br />
-<br /><br />
 ## Download the AVCS CORE Profile
 
 **AVCS CORE Profile Package - VoiceAttack Import Method:** <a href="https://veterans-gaming.com/files/file/37-avcs-core-profile-framework-for-voiceattack/">AVCS CORE (2.0).zip</a>
@@ -73,6 +70,9 @@ First, download the `AVCS CORE (2.0).zip` package from the link below - never do
 
         Extract the contents of the .zip file and import the .vax Profile Package inside
 
+<br /><br />
+*(the sample image above is from private .vax beta build and may not match the latest checksum below)*
+<br />
 <br /><br />
 
 ### Checksum
