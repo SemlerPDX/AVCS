@@ -25,6 +25,7 @@
     /// </summary>
     public class VAInline
     {
+        private const string DefaultProfileName = "AVCS4 Falcon BMS Radios (v2.0)";
         private const string MenuDatSubfolderPath = @"Data\Art\CkptArt\Menu.dat";
 
         private const string PhrasesConfigFileName = "avcs_bms_data_3.cfg";
@@ -32,10 +33,14 @@
 
         private static readonly HashSet<string> FlightMenus = new HashSet<string> { "WINGMAN", "ELEMENT", "FLIGHT" };
 
+        private static string _currentProfileName = "";
+
         // Must set single-threaded apartment, required for win forms folder selection dialog
         [STAThread]
         public void main()
         {
+            _currentProfileName = VA.ParseTokens("{PROFILE}") ?? DefaultProfileName;
+
             var rootFalconGamePath = VA.GetText("AVCS_BMS_ROOT_PROGRAM_PATH") ?? string.Empty; // Path to Falcon BMS root folder
             if (string.IsNullOrWhiteSpace(rootFalconGamePath))
             {
@@ -286,6 +291,7 @@
                 string marker = string.Format("<!-- {0} INSERTAGENCYBLOCK -->", agency.AgencyName.ToUpperInvariant());
                 htmlTemplate = htmlTemplate.Replace(marker, agencyBlockHtml);
                 htmlTemplate = htmlTemplate.Replace("FALCONGAMETITLE", falconGameTitle);
+                htmlTemplate = htmlTemplate.Replace("AVCSPROFILENAME", _currentProfileName);
             }
 
             return htmlTemplate.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).ToList() ?? new List<string>();

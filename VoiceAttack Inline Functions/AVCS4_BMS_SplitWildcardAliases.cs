@@ -8,7 +8,7 @@
 
     /*
     Required Referenced Assemblies V1 and V2:
-    Microsoft.CSharp.dll;System.dll
+    Microsoft.CSharp.dll;System.dll;System.Core.dll;
     */
 
     public class VAInline
