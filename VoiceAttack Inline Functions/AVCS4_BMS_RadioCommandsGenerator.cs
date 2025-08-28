@@ -33,6 +33,8 @@
 
         private static readonly HashSet<string> FlightMenus = new HashSet<string> { "WINGMAN", "ELEMENT", "FLIGHT" };
 
+        private static readonly char[] KeyValDelimiter = new[] { '=' };
+
         private static string _currentProfileName = "";
 
         // Must set single-threaded apartment, required for win forms folder selection dialog
@@ -221,6 +223,73 @@
 
             ShowFinalMessageBox(finalMessage);
             ///... see? That wasn't so hard!  Only took 85 hours to write 1000 lines of code to parse a game file and write some config files! :D
+            
+            // Now read all variables in the config files to avoid lengthy BMS reinit via AVCS CORE profile switch (why didn't this occur to me sooner?)
+            TryLoadConfigFiles(keysConfigPath, phrasesConfigPath);
+        }
+
+        private string[][] TryReadLines(string config1, string config2)
+        {
+            try
+            {
+                var lines1 = File.ReadAllLines(config1);
+                var lines2 = File.ReadAllLines(config2);
+
+                return new string[][] { lines1, lines2 };
+            }
+            catch (Exception ex)
+            {
+                // Fall back on lengthy BMS reinit via AVCS CORE profile switch if anything cocks up
+                VA.WriteToLog("AVCS ERROR: ReadConfigFiles exited early with the following message", "red");
+                VA.WriteToLog("AVCS ERROR: " + ex.Message, "red");
+                VA.SetBoolean("AVCS_BMS_INIT", false);
+                VA.SetBoolean("AVCS_BMS_INITIALIZED", false);
+
+                return new string[][] { new string[] { }, new string[] { } };
+            }
+        }
+
+        private void LoadLineArray(string[] lineArray)
+        {
+            foreach (var line in lineArray)
+            {
+                if (string.IsNullOrWhiteSpace(line) || !line.Contains('='))
+                {
+                    continue;
+                }
+
+                var parts = line.Split(KeyValDelimiter, 2);
+                var key = parts[0].Trim();
+                var value = parts.Length > 1 ? parts[1].Trim() : "";
+
+                VA.SetText(key, value);
+            }
+        }
+
+        private void TryLoadConfigFiles(string config1, string config2)
+        {
+            try
+            {
+                var lineArrays = TryReadLines(config1, config2);
+                foreach (var lineArray in lineArrays)
+                {
+                    if (lineArray.Length == 0)
+                    {
+                        throw new Exception("Failed to read config file - no lines found.");
+                    }
+
+                    LoadLineArray(lineArray);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Fall back on lengthy BMS reinit via AVCS CORE profile switch if anything cocks up
+                VA.WriteToLog("AVCS ERROR: LoadConfigFiles exited early with the following message", "red");
+                VA.WriteToLog("AVCS ERROR: " + ex.Message, "red");
+                VA.SetBoolean("AVCS_BMS_INIT", false);
+                VA.SetBoolean("AVCS_BMS_INITIALIZED", false);
+                return;
+            }
         }
 
 
