@@ -312,7 +312,7 @@
             @" guide have been generated for falconGameTitle " +
             @"{NEWLINE}{NEWLINE}To view this guide, say, ""Open the Command Reference""" +
             @"{NEWLINE}{NEWLINE}To create command aliases, say, ""Create a Command Alias""" +
-            @"{NEWLINE}{NEWLINE}To change BMS version, say, ""Select the Falcon Game Folder""" +
+            @"{NEWLINE}{NEWLINE}To change BMS version, say, ""Generate Radio Commands""" +
             @"{NEWLINE}{NEWLINE}{NEWLINE}Thanks for checking out AVCS4 BMS!{NEWLINE}-Sem";
     }
 
