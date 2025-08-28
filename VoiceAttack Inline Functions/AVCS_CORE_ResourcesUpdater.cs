@@ -1835,6 +1835,7 @@
             string footerAsk = "\nApply update now?";
 
             // --- Parse changelog ---
+            _isLinkLimitMsgAdded = false;
             var items = GetParsedChangelogLines(changelogString);
 
 
@@ -1920,7 +1921,7 @@
                     string url = item.Item2;
                     Control lbl;
 
-                    if (url != null)
+                    if (!string.IsNullOrWhiteSpace(url))
                     {
                         var link = new LinkLabel
                         {
