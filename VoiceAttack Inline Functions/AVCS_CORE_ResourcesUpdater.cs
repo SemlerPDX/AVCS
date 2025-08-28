@@ -656,7 +656,11 @@
                         continue;
                     }
 
-                    var filePath = Path.Combine(AvcsResourcesDirectory, fileName);
+                    // Determine if this file is in the resources folder or the command reference folder
+                    var filePath = IsEqual(fileExt, InlineFunctionExtensions)
+                        ? Path.Combine(AvcsResourcesDirectory, fileName)
+                        : Path.Combine(AvcsCommRefDirectory, fileName);
+
                     if (!IsValidResourceFile(filePath, parsedHashTable))
                     {
                         invalidFilePaths.Add(filePath);
