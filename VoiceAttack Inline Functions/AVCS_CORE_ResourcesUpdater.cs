@@ -158,7 +158,7 @@
 
         /// <summary>
         /// Fully qualified URL to current branch resources file sizes list.  Example URL path value:<br/>
-        /// AvcsResourcesFilesSizeUrl = @"../avcs/core/data/(branch)/core_resource_files.core"
+        /// AvcsResourcesFilesSizeUrl = @"../avcs/core/data/xml/(branch)/core_resource_files.core"
         /// </summary>
         private static string AvcsResourcesFilesSizeUrl { get; set; }
 
@@ -1107,8 +1107,12 @@
                     return Array.Empty<byte>();
                 }
 
+                try { Native.DeleteUrlCacheEntryW(url); } catch { }
+
+                string bustUrl = url + (url.IndexOf('?') >= 0 ? "&" : "?") + "cb=" + DateTime.UtcNow.Ticks.ToString();
+
                 IStream comStream;
-                int hr = Native.URLOpenBlockingStreamW(IntPtr.Zero, url, out comStream, 0, IntPtr.Zero);
+                int hr = Native.URLOpenBlockingStreamW(IntPtr.Zero, bustUrl, out comStream, 0, IntPtr.Zero);
                 if (hr != 0 || comStream == null)
                 {
                     return Array.Empty<byte>();
@@ -1120,7 +1124,6 @@
                     {
                         byte[] buffer = new byte[8192];
                         IntPtr pRead = Marshal.AllocHGlobal(sizeof(int));
-
                         try
                         {
                             while (true)
@@ -1144,7 +1147,7 @@
                 }
                 finally
                 {
-                    try { Marshal.ReleaseComObject(comStream); } catch { } // ignore
+                    try { Marshal.ReleaseComObject(comStream); } catch { }
                 }
             }
             catch
@@ -2084,5 +2087,9 @@
             out IStream ppStream,
             int dwReserved,
             IntPtr lpfnCB);
+
+        [DllImport("wininet.dll", CharSet = CharSet.Unicode, SetLastError = true, ExactSpelling = true)]
+        internal static extern bool DeleteUrlCacheEntryW(string lpszUrlName);
+
     }
 }
