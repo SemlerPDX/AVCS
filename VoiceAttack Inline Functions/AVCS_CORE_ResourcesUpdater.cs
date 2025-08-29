@@ -1729,10 +1729,9 @@
             y += sep2.Height + spacing * 2;
 
 
-            // Note
+            // Appendix Note
             var lblNote = new Label
             {
-                //Text = "(you can adjust these later; this just makes first-time init faster)",
                 Text = "(after first time use, CORE will adapt itself to new profiles or use in other VA version)",
                 AutoSize = true,
                 Location = new Point(padding, y),
