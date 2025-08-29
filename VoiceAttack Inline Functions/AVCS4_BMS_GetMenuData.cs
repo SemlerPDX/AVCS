@@ -88,11 +88,21 @@
                 icon
             );
         }
-
         private string PickFolder(string rootFolder = "")
         {
+            using (var owner = new Form())
             using (var dlg = new FolderBrowserDialog())
             {
+                owner.ShowInTaskbar = false;
+                owner.StartPosition = FormStartPosition.Manual;
+                owner.Size = new System.Drawing.Size(0, 0);
+                owner.Location = new System.Drawing.Point(-32000, -32000); // way off-screen
+                owner.Opacity = 0;
+                owner.Show();
+                owner.TopMost = true;
+                owner.Activate();
+                owner.Focus();
+
                 dlg.Description = "Select your Falcon BMS program folder:";
                 dlg.RootFolder = Environment.SpecialFolder.MyComputer;
 
@@ -101,7 +111,12 @@
                     dlg.SelectedPath = rootFolder;
                 }
 
-                if (dlg.ShowDialog() == DialogResult.OK)
+                // This brings the dialog to the foreground as topmost
+                DialogResult result = dlg.ShowDialog(owner);
+
+                owner.Close();
+
+                if (result == DialogResult.OK)
                 {
                     return dlg.SelectedPath;
                 }
