@@ -42,10 +42,11 @@
                 baseCommands = VA.GetText(allCommandsVarName) ?? string.Empty;
             }
 
+            var currentAliasSet = BuildHashSet(currentAliases);
+            var baseCommandSet = BuildHashSet(baseCommands);
 
             var aliases = VA.GetText("~alias") ?? string.Empty; // Null or Empty check lives just outside and above this inline - will always have value, else allow throw
             string[] extractedAliases = VA.ExtractPhrases(aliases);
-
 
             int aliasesLength = extractedAliases.Length;
             if (aliasesLength > 10)
@@ -61,13 +62,34 @@
                     continue;
                 }
 
-                if (currentAliases.Contains(alias) || baseCommands.Contains(alias))
+                if (currentAliasSet.Contains(alias) || baseCommandSet.Contains(alias))
                 {
                     VA.SetBoolean("~avcs_alias_exists", true);
                     VA.SetText("~avcs_existing_alias", alias);
                     return;
                 }
             }
+        }
+
+        private static HashSet<string> BuildHashSet(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                return new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            }
+
+            HashSet<string> result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            var arr = input.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var v in arr)
+            {
+                string trimmed = v.Trim();
+                if (!string.IsNullOrEmpty(trimmed))
+                {
+                    result.Add(trimmed);
+                }
+            }
+
+            return result;
         }
 
     }

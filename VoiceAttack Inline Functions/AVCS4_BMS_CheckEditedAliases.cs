@@ -42,25 +42,13 @@
                 baseCommands = VA.GetText(allCommandsVarName) ?? string.Empty;
             }
 
+            var currentAliasSet = BuildHashSet(currentAliases);
+            var baseCommandSet = BuildHashSet(baseCommands);
+
             var aliases = VA.GetText("~alias") ?? string.Empty; // Null or Empty check lives just outside and above this inline - will always have value, else allow throw
             string[] extractedAliases = VA.ExtractPhrases(aliases);
 
             // This is an edit, so SOME parts of the new extracted aliases may exist in currentAliases
-            // Build set of current aliases for fast lookup
-            HashSet<string> currentAliasSet = new HashSet<string>();
-            if (!string.IsNullOrEmpty(currentAliases))
-            {
-                string[] arr = currentAliases.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-                for (int i = 0; i < arr.Length; i++)
-                {
-                    string v = arr[i].Trim();
-                    if (!string.IsNullOrEmpty(v))
-                    {
-                        currentAliasSet.Add(v);
-                    }
-                }
-            }
-
             // Filter extractedAliases to only unique and not in currentAliasSet
             List<string> unique = new List<string>();
             HashSet<string> added = new HashSet<string>();
@@ -90,13 +78,34 @@
                     continue;
                 }
 
-                if (currentAliases.Contains(alias) || baseCommands.Contains(alias))
+                if (currentAliasSet.Contains(alias) || baseCommandSet.Contains(alias))
                 {
                     VA.SetBoolean("~avcs_alias_exists", true);
                     VA.SetText("~avcs_existing_alias", alias);
                     return;
                 }
             }
+        }
+
+        private static HashSet<string> BuildHashSet(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                return new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            }
+
+            HashSet<string> result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            var arr = input.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var v in arr)
+            {
+                string trimmed = v.Trim();
+                if (!string.IsNullOrEmpty(trimmed))
+                {
+                    result.Add(trimmed);
+                }
+            }
+
+            return result;
         }
 
     }
