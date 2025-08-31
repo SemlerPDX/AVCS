@@ -54,12 +54,16 @@
             HashSet<string> added = new HashSet<string>();
             for (int i = 0; i < extractedAliases.Length; i++)
             {
-                string v = extractedAliases[i].Trim();
-                if (string.IsNullOrEmpty(v)) continue;
-                if (!currentAliasSet.Contains(v) && !added.Contains(v))
+                var alias = extractedAliases[i].Trim();
+                if (string.IsNullOrEmpty(alias))
                 {
-                    unique.Add(v);
-                    added.Add(v);
+                    continue;
+                }
+
+                if (!currentAliasSet.Contains(alias) && !added.Contains(alias))
+                {
+                    unique.Add(alias);
+                    added.Add(alias);
                 }
             }
             extractedAliases = unique.ToArray();

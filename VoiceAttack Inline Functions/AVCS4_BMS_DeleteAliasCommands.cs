@@ -72,13 +72,6 @@
 
             var joinedCommands = string.Join(";", finalCommands);
 
-
-            if (string.IsNullOrWhiteSpace(joinedCommands))
-            {
-                // Joined empty - exiting and flagging for deletion
-                return;
-            }
-
             int savedRequests = VA.GetInt("AVCS_SFS_SAVED_requests") ?? 0;
             savedRequests++;
 
@@ -93,5 +86,4 @@
             VA.SetText(savedVarValue, joinedCommands);
         }
     }
-
 }
