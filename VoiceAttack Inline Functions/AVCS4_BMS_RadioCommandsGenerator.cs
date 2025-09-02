@@ -14,7 +14,7 @@
     Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Windows.Forms.dll;
 
     Required Referenced Assemblies V2:
-    Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Collections.dll;System.Linq.dll;System.Linq.Expressions.dll;System.Security.Claims.dll;System.Security.Principal.Windows.dll;System.Windows.Forms.dll;
+    Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Collections.dll;System.Linq.dll;System.Linq.Expressions.dll;System.Security.Claims.dll;System.Security.Principal.Windows.dll;System.Windows.Forms.dll;System.Private.Uri.dll;
     */
 
     /// <summary>
@@ -30,6 +30,11 @@
 
         private const string PhrasesConfigFileName = "avcs_bms_data_3.cfg";
         private const string KeysConfigFileName = "avcs_bms_data_4.cfg";
+
+        private const string MasterTemplate = "commref_bms_master_template";
+        private const string AgencyBlockTemplate = "commref_bms_agency_block_template";
+        private const string AgencyPageTemplate = "commref_bms_agency_page_template";
+        private const string CommandItemTemplate = "commref_bms_command_item_template";
 
         private static readonly HashSet<string> FlightMenus = new HashSet<string> { "WINGMAN", "ELEMENT", "FLIGHT" };
 
@@ -84,43 +89,27 @@
             var htmlOutFileName = VA.ParseTokens(@"commref_bms{INT:AVCS_BMS_VER_MAJOR}.html");
             var htmlOutPath = Path.Combine(htmlFolderPath, htmlOutFileName);
 
-            var htmlMainTemplate = VA.GetText("~commandReferenceTemplate") ?? string.Empty;
-            if (string.IsNullOrWhiteSpace(htmlMainTemplate))
+            string htmlMainTemplate;
+            if (!TryLoadTemplate("~commandReferenceTemplate", MasterTemplate, "AVCS_BMS_COMMREF_TEMPLATE", out htmlMainTemplate))
             {
-                VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_TEMPLATE is null or white space.", "red");
-                var errorMessage = "AVCS_BMS_COMMREF_TEMPLATE is null or empty.";
-                VA.SetText("AVCS_EX_MSG", errorMessage);
-                VA.SetBoolean("AVCS_ERROR", true);
                 return;
             }
 
-            var htmlBlockTemplate = VA.GetText("~agencyBlockTemplate") ?? string.Empty;
-            if (string.IsNullOrWhiteSpace(htmlBlockTemplate))
+            string htmlBlockTemplate;
+            if (!TryLoadTemplate("~agencyBlockTemplate", AgencyBlockTemplate, "AVCS_BMS_COMMREF_BLOCK_TEMPLATE", out htmlBlockTemplate))
             {
-                VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_BLOCK_TEMPLATE is null or white space.", "red");
-                var errorMessage = "AVCS_BMS_COMMREF_BLOCK_TEMPLATE is null or empty.";
-                VA.SetText("AVCS_EX_MSG", errorMessage);
-                VA.SetBoolean("AVCS_ERROR", true);
                 return;
             }
 
-            var htmlPageTemplate = VA.GetText("~agencyPageTemplate") ?? string.Empty;
-            if (string.IsNullOrWhiteSpace(htmlPageTemplate))
+            string htmlPageTemplate;
+            if (!TryLoadTemplate("~agencyPageTemplate", AgencyPageTemplate, "AVCS_BMS_COMMREF_PAGE_TEMPLATE", out htmlPageTemplate))
             {
-                VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_PAGE_TEMPLATE is null or white space.", "red");
-                var errorMessage = "AVCS_BMS_COMMREF_PAGE_TEMPLATE is null or empty.";
-                VA.SetText("AVCS_EX_MSG", errorMessage);
-                VA.SetBoolean("AVCS_ERROR", true);
                 return;
             }
 
-            var htmlItemTemplate = VA.GetText("~commandItemTemplate") ?? string.Empty;
-            if (string.IsNullOrWhiteSpace(htmlItemTemplate))
+            string htmlItemTemplate;
+            if (!TryLoadTemplate("~commandItemTemplate", CommandItemTemplate, "AVCS_BMS_COMMREF_ITEM_TEMPLATE", out htmlItemTemplate))
             {
-                VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_ITEM_TEMPLATE is null or white space.", "red");
-                var errorMessage = "AVCS_BMS_COMMREF_ITEM_TEMPLATE is null or empty.";
-                VA.SetText("AVCS_EX_MSG", errorMessage);
-                VA.SetBoolean("AVCS_ERROR", true);
                 return;
             }
 
@@ -247,6 +236,95 @@
 
                 return new string[][] { new string[] { }, new string[] { } };
             }
+        }
+        private bool TryLoadTemplate(string cachedVarName, string pathVarName, string errorToken, out string template)
+        {
+            template = VA.GetText(cachedVarName) ?? string.Empty;
+
+            // Special case: if the cached value is actually a file path, ignore it and fall back to the path var.
+            if (!string.IsNullOrWhiteSpace(template) && LooksLikeExistingFile(template))
+            {
+                template = string.Empty;
+            }
+
+            if (string.IsNullOrWhiteSpace(template))
+            {
+                var path = VA.GetText(pathVarName) ?? string.Empty;
+                template = TryReadTemplateFile(path);
+            }
+
+            if (!string.IsNullOrWhiteSpace(template))
+            {
+                return true;
+            }
+
+            // Standard error handling
+            var msg = errorToken + " is null or white space.";
+            VA.WriteToLog("AVCS ERROR: " + msg, "red");
+            VA.SetText("AVCS_EX_MSG", errorToken + " is null or empty.");
+            VA.SetBoolean("AVCS_ERROR", true);
+            return false;
+        }
+
+        private string TryReadTemplateFile(string path)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(path))
+                {
+                    return string.Empty;
+                }
+
+                if (!File.Exists(path))
+                {
+                    return string.Empty;
+                }
+
+                using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                using (var sr = new StreamReader(fs, Encoding.UTF8, detectEncodingFromByteOrderMarks: true))
+                {
+                    var fileContents = sr.ReadToEnd();
+                    if (string.IsNullOrWhiteSpace(fileContents))
+                    {
+                        return string.Empty;
+                    }
+
+                    return fileContents;
+                }
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+
+        private static bool LooksLikeExistingFile(string value)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    return false;
+                }
+
+                var s = value.Trim();
+                if (File.Exists(s))
+                {
+                    return true;
+                }
+
+                Uri uri;
+                if (Uri.TryCreate(s, UriKind.Absolute, out uri) && uri.IsFile && File.Exists(uri.LocalPath))
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                // ignore and return false
+            }
+
+            return false;
         }
 
         private void LoadLineArray(string[] lineArray)

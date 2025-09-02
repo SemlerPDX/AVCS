@@ -1,9 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <HasMB>false</HasMB>
-  <Id>9313e3bc-f465-43d7-a30d-654f299fe189</Id>
+  <Id>86ff56be-aec4-47c3-9684-40efa2f657b2</Id>
   <Name>AVCS CORE DEV TOOLKIT (v2.0)</Name>
   <Commands>
+    <Command>
+      <Referrer xsi:nil="true" />
+      <ExecType>3</ExecType>
+      <Confidence>0</Confidence>
+      <PrefixActionCount>0</PrefixActionCount>
+      <IsDynamicallyCreated>false</IsDynamicallyCreated>
+      <TargetProcessSet>false</TargetProcessSet>
+      <TargetProcessType>0</TargetProcessType>
+      <TargetProcessLevel>0</TargetProcessLevel>
+      <CompareType>0</CompareType>
+      <ExecFromWildcard>false</ExecFromWildcard>
+      <IsSubCommand>false</IsSubCommand>
+      <IsOverride>false</IsOverride>
+      <BaseId>d0b99d8c-cc2f-41ff-aac4-2f51a0cf9da9</BaseId>
+      <OriginId>00000000-0000-0000-0000-000000000000</OriginId>
+      <SessionEnabled>true</SessionEnabled>
+      <DoubleTapInvoked>false</DoubleTapInvoked>
+      <SingleTapDelayedInvoked>false</SingleTapDelayedInvoked>
+      <LongTapInvoked>false</LongTapInvoked>
+      <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
+      <SleepFlag>0</SleepFlag>
+      <Id>69809fd5-81cb-45d9-a0d9-372d31d88292</Id>
+      <CommandString>Extract Clipboard Commands</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <PairingSet>false</PairingSet>
+          <PairingSetElse>false</PairingSetElse>
+          <Ordinal>0</Ordinal>
+          <ConditionMet xsi:nil="true" />
+          <IndentLevel>0</IndentLevel>
+          <ConditionSkip>false</ConditionSkip>
+          <IsSuffixAction>false</IsSuffixAction>
+          <DecimalTransient1>0</DecimalTransient1>
+          <Id>346e6887-0164-4c56-9af1-675b50140cc9</Id>
+          <ActionType>InlineFunctionCS</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+public class VAInline
+{
+	public void main()
+	{
+		var extracted = VA.ParseTokens("{CLIP}");
+		var commands = vaProxy.Utility.ExtractPhrases(extracted);
+		var joinedCommands = string.Join(Environment.NewLine, commands);
+		Clipboard.SetText(joinedCommands);
+	}
+} </Context>
+          <Context2 xml:space="preserve">Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Data.dll;System.Data.DataSetExtensions.dll;System.Drawing.dll;System.Net.Http.dll;System.Windows.Forms.dll;System.Xml.dll;System.Xml.Linq.dll;System.Linq.dll;System.Linq.Expressions.dll</Context2>
+          <Context3>ExtractCommandsFromClipboard</Context3>
+          <Context4 />
+          <X>1</X>
+          <Y>1</Y>
+          <Z>0</Z>
+          <InputMode>0</InputMode>
+          <ConditionPairing>0</ConditionPairing>
+          <ConditionGroup>0</ConditionGroup>
+          <ConditionStartOperator>0</ConditionStartOperator>
+          <ConditionStartValue>0</ConditionStartValue>
+          <ConditionStartValueType>0</ConditionStartValueType>
+          <ConditionStartType>0</ConditionStartType>
+          <DecimalContext1>0</DecimalContext1>
+          <DecimalContext2>0</DecimalContext2>
+          <DateContext1>0001-01-01T08:00:00Z</DateContext1>
+          <DateContext2>0001-01-01T08:00:00Z</DateContext2>
+          <Disabled>false</Disabled>
+          <RandomSounds />
+          <IntegerContext1>2</IntegerContext1>
+          <IntegerContext2>0</IntegerContext2>
+        </CommandAction>
+        <CommandAction>
+          <PairingSet>false</PairingSet>
+          <PairingSetElse>false</PairingSetElse>
+          <Ordinal>0</Ordinal>
+          <ConditionMet xsi:nil="true" />
+          <IndentLevel>0</IndentLevel>
+          <ConditionSkip>false</ConditionSkip>
+          <IsSuffixAction>false</IsSuffixAction>
+          <DecimalTransient1>0</DecimalTransient1>
+          <Id>de5e83ae-0f99-4e61-a62e-1e28dd26ab8d</Id>
+          <ActionType>Say</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>Done.</Context>
+          <Context3>00000000-0000-0000-0000-000000000000</Context3>
+          <Context4>Default</Context4>
+          <X>85</X>
+          <Y>0</Y>
+          <Z>0</Z>
+          <InputMode>0</InputMode>
+          <ConditionPairing>0</ConditionPairing>
+          <ConditionGroup>0</ConditionGroup>
+          <ConditionStartOperator>0</ConditionStartOperator>
+          <ConditionStartValue>0</ConditionStartValue>
+          <ConditionStartValueType>0</ConditionStartValueType>
+          <ConditionStartType>0</ConditionStartType>
+          <DecimalContext1>0</DecimalContext1>
+          <DecimalContext2>0</DecimalContext2>
+          <DateContext1>0001-01-01T08:00:00Z</DateContext1>
+          <DateContext2>0001-01-01T08:00:00Z</DateContext2>
+          <Disabled>false</Disabled>
+          <RandomSounds />
+          <IntegerContext1>0</IntegerContext1>
+          <IntegerContext2>0</IntegerContext2>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+      <SourceProfile>00000000-0000-0000-0000-000000000000</SourceProfile>
+      <UseConfidence>false</UseConfidence>
+      <minimumConfidenceLevel>0</minimumConfidenceLevel>
+      <UseJoystick>false</UseJoystick>
+      <joystickNumber>0</joystickNumber>
+      <joystickButton>0</joystickButton>
+      <joystickNumber2>0</joystickNumber2>
+      <joystickButton2>0</joystickButton2>
+      <joystickUp>false</joystickUp>
+      <KeepRepeating>false</KeepRepeating>
+      <UseProcessOverride>false</UseProcessOverride>
+      <ProcessOverrideActiveWindow>true</ProcessOverrideActiveWindow>
+      <LostFocusStop>false</LostFocusStop>
+      <PauseLostFocus>false</PauseLostFocus>
+      <LostFocusBackCompat>true</LostFocusBackCompat>
+      <UseMouse>false</UseMouse>
+      <Mouse1>false</Mouse1>
+      <Mouse2>false</Mouse2>
+      <Mouse3>false</Mouse3>
+      <Mouse4>false</Mouse4>
+      <Mouse5>false</Mouse5>
+      <Mouse6>false</Mouse6>
+      <Mouse7>false</Mouse7>
+      <Mouse8>false</Mouse8>
+      <Mouse9>false</Mouse9>
+      <MouseUpOnly>false</MouseUpOnly>
+      <MousePassThru>true</MousePassThru>
+      <joystickExclusive>false</joystickExclusive>
+      <lastEditedAction>0125b4b7-bced-472b-afa2-937f51b54207</lastEditedAction>
+      <UseProfileProcessOverride>false</UseProfileProcessOverride>
+      <ProfileProcessOverrideActiveWindow>false</ProfileProcessOverrideActiveWindow>
+      <RepeatIfKeysDown>false</RepeatIfKeysDown>
+      <RepeatIfMouseDown>false</RepeatIfMouseDown>
+      <RepeatIfJoystickDown>false</RepeatIfJoystickDown>
+      <AH>0</AH>
+      <CL>0</CL>
+      <HasMB>false</HasMB>
+      <UseVariableHotkey>false</UseVariableHotkey>
+      <CLE>0</CLE>
+      <EX1>false</EX1>
+      <EX2>false</EX2>
+      <InternalId xsi:nil="true" />
+      <HasInput>false</HasInput>
+      <HotkeyDoubleTapLevel>0</HotkeyDoubleTapLevel>
+      <MouseDoubleTapLevel>0</MouseDoubleTapLevel>
+      <JoystickDoubleTapLevel>0</JoystickDoubleTapLevel>
+      <HotkeyLongTapLevel>0</HotkeyLongTapLevel>
+      <MouseLongTapLevel>0</MouseLongTapLevel>
+      <JoystickLongTapLevel>0</JoystickLongTapLevel>
+      <AlwaysExec>false</AlwaysExec>
+      <ResourceBalance>0</ResourceBalance>
+      <PreventExec>false</PreventExec>
+      <ExternalEventsEnabled>false</ExternalEventsEnabled>
+      <ExcludeExecOnRecognized>false</ExcludeExecOnRecognized>
+      <UseVariableMouseShortcut>false</UseVariableMouseShortcut>
+      <UseVariableJoystickShortcut>false</UseVariableJoystickShortcut>
+    </Command>
     <Command>
       <Referrer xsi:nil="true" />
       <ExecType>3</ExecType>
@@ -25,7 +213,7 @@
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>43c8df4e-066f-478f-ae52-55c317f0404d</Id>
+      <Id>c7f79a9a-7aca-4d2f-baf8-a9fc6c745bb1</Id>
       <CommandString>[Lock;Unlock] [the;uh;a;] Keyboard</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -37,7 +225,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f4ba43cd-1a86-4caa-9afe-eb476830c1af</Id>
+          <Id>f2ceb351-6a82-4070-bc16-55bdf5147381</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -72,7 +260,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>28d42d30-f181-4e64-9029-5089a37de549</Id>
+          <Id>4e554e88-aeb5-46a5-a235-9de71097f459</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -107,7 +295,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>6e43d257-ca8f-4c3a-89ce-34da1e7c7c39</Id>
+          <Id>5a6652f6-85c9-4ecb-a1f4-772f04e0e343</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -142,7 +330,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0f8ca667-f863-4504-a0d9-3eb95b720f40</Id>
+          <Id>281ab248-28d9-4143-958c-b08079e96e99</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -177,7 +365,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2dbba4b0-f78b-469d-a285-ff845dbffa29</Id>
+          <Id>e550f53e-1bc7-4fba-bc50-493d4f6d4b57</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -212,7 +400,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c28f6e48-89f6-4ad3-861c-a9827b70bcc0</Id>
+          <Id>898df987-c1dd-4833-a085-013187980136</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -239,7 +427,7 @@
           <ConditionExpressions>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>ae931de4-4e18-4319-87e5-26ab26ef6c2b</Id>
+                <Id>7e00cc62-edaf-4882-beff-04440ba12c97</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{CMDSEGMENT:0}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -265,7 +453,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>4aef01b6-f1c4-48f6-af41-74a75a54f831</Id>
+          <Id>365c238f-b4c1-47e6-92c8-b1e9ea6225b8</Id>
           <ActionType>BlockKeyboard</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -300,7 +488,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>108351f4-ea00-429f-b066-4861f68191b0</Id>
+          <Id>afeab68a-3be2-4b57-962e-7f61930b1312</Id>
           <ActionType>ConditionElse</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -334,7 +522,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>21ea9fdd-2411-4d2a-afa6-455950a23eb2</Id>
+          <Id>09a239d5-bbcd-4868-8ca8-d0f0c72acb32</Id>
           <ActionType>BlockKeyboard</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -369,7 +557,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d141b3c3-5cd4-4ba2-bbe7-03b5b2a4fe26</Id>
+          <Id>b29b3435-a084-4359-8b15-513ef93cd3fd</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -403,7 +591,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>55d0dc11-132b-4a2c-b856-61ffb4e7f17c</Id>
+          <Id>4fac3bc8-c3e2-4126-b2aa-ed8b4622df4e</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -440,7 +628,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>964b8c0b-cdb9-4bdd-90d9-f7e45f1707af</Id>
+          <Id>3e4932e6-3810-4b71-a302-f11139f8b4b7</Id>
           <ActionType>Say</ActionType>
           <Duration>1</Duration>
           <Delay>0</Delay>
@@ -477,7 +665,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>8ec5804e-ad72-4206-be48-32c2fc846777</Id>
+          <Id>c44b7666-3e38-4317-b16f-8b62e5422010</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -597,7 +785,7 @@
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>8cdcc7e4-adfd-4723-ba49-e8dce5e7e56d</Id>
+      <Id>559197d1-b28b-4862-9444-2e1ba9d2abbb</Id>
       <CommandString>[Read;Display;Show me;Check] [the;uh;a;] [text;boolean;integer;decimal;date;] [variable;value;variable value]</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -609,7 +797,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>4db3ff6b-17d9-4d05-8651-8025bc0ddeda</Id>
+          <Id>15180e6e-171a-432d-9c91-1a141ef95fa7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -644,7 +832,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ac85f44d-d969-4c02-845d-4c4db72d25ca</Id>
+          <Id>7ff09570-d1b0-4f8e-bc4a-b5342a38381b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -679,7 +867,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b9e69e15-9a10-43f5-bd2a-ebda369a8775</Id>
+          <Id>1a531e89-384d-408e-be7d-260f85ce1df2</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -714,7 +902,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0f125c2a-781b-41cd-8ba2-de8e68c1df02</Id>
+          <Id>c8ce433a-c6f0-427e-b62f-3cc2ca42d82e</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -749,7 +937,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f6b17e34-1ff1-49a5-b380-7d1291d2990e</Id>
+          <Id>bad6e8fb-d1ee-4279-8694-f367ab7c2820</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -784,7 +972,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>eed19e84-68e3-497b-93d3-5f2220fd930a</Id>
+          <Id>82f745f5-30f9-43a1-b542-0283c6e2ecce</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -821,7 +1009,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>8bfe8954-95c5-49a4-9676-504528080dd7</Id>
+          <Id>549db853-bf6b-4718-8bbf-c6e70cd10664</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -861,7 +1049,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d297e9ea-c186-4418-96df-3db3cd33f10f</Id>
+          <Id>544531e5-2545-425f-a3e3-d2fa3f428c4c</Id>
           <ActionType>ConditionElse</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -895,7 +1083,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f8a80b37-0030-40f6-b9c5-7a118f637e36</Id>
+          <Id>7d5043c3-041f-4aed-80d9-68b03834c7e7</Id>
           <ActionType>GetUserList</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -934,7 +1122,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>47bf81ea-167a-443c-925b-5e76673a2194</Id>
+          <Id>140dd149-d803-4496-84b8-3ab2fc0816da</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -968,7 +1156,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>7c91cbc6-fc3f-46a9-aa79-2ef3dbb39a06</Id>
+          <Id>8bf8b266-7b99-4436-bee3-48fbd179f9c5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1003,7 +1191,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d0ae84d0-7292-42f9-b064-742808860726</Id>
+          <Id>fab002a0-caf8-4d51-8878-8e5cfad53267</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1040,7 +1228,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>769f525b-d8e7-4132-b1e3-2e2be7e3cfbd</Id>
+          <Id>327ab5ff-4774-4e3e-9070-48c0ac56e147</Id>
           <ActionType>GetUserText</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1078,7 +1266,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f29ecf67-2a47-4632-9de0-b3ff6d98d885</Id>
+          <Id>8de651f1-12ae-4c8d-85f8-94ff7506aa19</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1113,7 +1301,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>03e9855e-f44c-4a1a-bdce-e5d760200eeb</Id>
+          <Id>2dcf177c-58f6-4732-a7d9-d7cfbdb17bd9</Id>
           <ActionType>ConditionElseIf</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1150,7 +1338,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>1270344a-0953-4b7a-8ff9-9576fbd88966</Id>
+          <Id>186447f7-fbf6-48c3-9640-90f4f402728a</Id>
           <ActionType>GetUserText</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1188,7 +1376,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b37c0f75-6ac7-435a-b4d2-b7567bc6712d</Id>
+          <Id>38a4cf59-54d8-4234-8915-889efe1c2811</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1228,7 +1416,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>073d7671-85df-4594-8c48-c2a254fb9ec9</Id>
+          <Id>38d01da4-4371-4b24-9634-a2fe584236ef</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1263,7 +1451,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>6ece2fdb-2a94-4e64-9b52-ce4fc18d1003</Id>
+          <Id>d4c31057-ef99-437a-a4bf-cc7e1e7a19b0</Id>
           <ActionType>ConditionElseIf</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1300,7 +1488,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0d6d79d8-c839-4e5c-8d37-4bb7c28c4cb8</Id>
+          <Id>ee471ceb-3003-45f3-b9e9-23f7e845dfca</Id>
           <ActionType>GetUserText</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1338,7 +1526,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ea0ddfa3-b4bc-47fe-b3b1-8df344996c11</Id>
+          <Id>3cfd4180-6756-430b-ad40-9054e68161d9</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1373,7 +1561,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>e8c77ff2-90e2-435e-9776-957486341d01</Id>
+          <Id>a1d4ef08-d249-48ba-b638-70c494489e91</Id>
           <ActionType>ConditionElseIf</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1410,7 +1598,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>03136c76-25b5-4709-bd5a-f0e8955db528</Id>
+          <Id>03ab5373-276a-4f2a-8eec-c02dc0dfc648</Id>
           <ActionType>GetUserText</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1448,7 +1636,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>14dd749e-153f-4b24-a740-e9cf6c949c11</Id>
+          <Id>e8cfe2b9-2e6c-4c6c-a85c-41fa2cf9c5e5</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1483,7 +1671,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>efaa41f1-f129-4ac7-88be-b31d049d9f91</Id>
+          <Id>fe858be3-f2f4-43d5-ade0-315811452b2e</Id>
           <ActionType>ConditionElseIf</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1520,7 +1708,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c120a4dc-60ef-4b75-be69-0800b24891a5</Id>
+          <Id>ca8464ab-f0f0-423a-9f4c-3c1164d8e1ab</Id>
           <ActionType>GetUserText</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1558,7 +1746,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>3466fb0e-7be7-4329-86e5-1caafbbb2165</Id>
+          <Id>543c8e7f-6fdb-4362-8e50-cf73821daaed</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1593,7 +1781,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0145c635-02a5-42bd-a6bb-650cdce75069</Id>
+          <Id>f1d15b93-66a7-4717-9d05-64309d3b21f0</Id>
           <ActionType>ConditionElse</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1627,7 +1815,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>75aed7d6-82a9-4c75-93e9-6f837e6146e3</Id>
+          <Id>aa8f36d5-8513-4dcb-8188-0e060b527036</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1662,7 +1850,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>da028d53-f3ff-4373-b131-73bb648cdff7</Id>
+          <Id>f1b80020-8595-4a60-bcf0-d0b86ab498d4</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1696,7 +1884,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>059ab4bd-d127-4902-8b31-4d98673b1ffb</Id>
+          <Id>30b3d550-bc55-483a-be2a-c2eaca1566ee</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1817,7 +2005,7 @@
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>9be26ffa-19c9-4eb6-b59f-aa03379561fd</Id>
+      <Id>a5d2fc17-9019-4340-a5c0-c7e0d360a8a6</Id>
       <CommandString>[Display;Show] [the;uh;a;] [Voice Attack;VoiceAttack] [Program;Programs] Version</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -1829,7 +2017,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>620776e8-a67f-4309-a561-d9fd11e63e3d</Id>
+          <Id>a9493c03-a2f5-4116-a5cf-572d2498af23</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1864,7 +2052,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>08382515-6d4a-48ce-9af1-0e8c526aa5e3</Id>
+          <Id>9bea3159-d1d6-4d6b-b145-1de6e999ac78</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1899,7 +2087,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>fb780f7e-c013-402f-9b50-2018c18b1da7</Id>
+          <Id>26152620-73f0-4ff9-a3ca-dbc5a825bc04</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1934,7 +2122,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>fe963e44-502d-45ca-b213-95675f3789c3</Id>
+          <Id>c6726cee-9042-4868-964f-6493affdbe6b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -1969,7 +2157,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d8a1a73a-14f9-4549-88e5-4f50f6edf4fc</Id>
+          <Id>a620f8bd-e20c-44f8-9024-375d670846e5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2004,7 +2192,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>27674489-d2eb-4060-b598-c40a16d17a90</Id>
+          <Id>f99e6958-c87a-4aba-9526-7c0375647ab0</Id>
           <ActionType>GetUserText</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2042,7 +2230,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>382ec9e2-56a9-4a4a-b0c9-8eb9b757f924</Id>
+          <Id>b9b35061-25d3-4613-956b-b0ee63daa1ae</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2069,7 +2257,7 @@
           <ConditionExpressions>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>28fa503c-c29e-4709-82d2-3cb0b7912982</Id>
+                <Id>4bd6bfd8-2b5a-499c-a3ce-359b797d0015</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>~avcs_display_version</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -2095,7 +2283,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>7af07d38-21e1-4331-893a-a8593c976de7</Id>
+          <Id>1859bde1-3d7e-4d33-85c6-bb1f29ef529e</Id>
           <ActionType>SetClipboard</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2130,7 +2318,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>bc173f96-a392-4e68-b419-c6eb9d80db82</Id>
+          <Id>50b3fcaa-9e2d-435e-9ffb-eafc83e969a5</Id>
           <ActionType>Say</ActionType>
           <Duration>1</Duration>
           <Delay>0</Delay>
@@ -2167,7 +2355,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c9622999-6e6c-4009-8799-33e516625608</Id>
+          <Id>40abadf0-aa27-4def-90af-eaf5a3e338fe</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2201,7 +2389,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>1f2e5b33-2358-467d-aa04-68cd06cb3600</Id>
+          <Id>569dcfcc-f11c-4b6e-99d4-40335c6ba180</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2322,7 +2510,7 @@
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>f7c66c4b-40bc-4ee6-8d00-3bb9fbb6e71f</Id>
+      <Id>8308ffd8-f279-47b6-90ed-7c0eb0d12ed9</Id>
       <CommandString>[Stop;Stopped] [all;] [Command;Commands;]</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -2334,7 +2522,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>8b110a9e-2d9e-49eb-a1ca-20f1d0fc98bc</Id>
+          <Id>833d596a-b93f-4894-91cd-b5a3dba1f528</Id>
           <ActionType>InternalProcess_StopProcessing</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2454,7 +2642,7 @@
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>e3f6fa4c-f83c-48f5-9c03-b21eea1258e1</Id>
+      <Id>994676f4-b06d-40ab-8923-1162fda53cbc</Id>
       <CommandString>[What;Watt] time is it;[What's;Watts;What;Watt] [is;] [the;uh;a] time</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -2466,7 +2654,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>a5ed3def-608e-431a-9fec-57ef8d56f409</Id>
+          <Id>27b25800-d204-48db-b92b-9a4c1f60117c</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2589,7 +2777,7 @@
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>1f1527c5-4882-4cf6-b91f-e780167e9c6d</Id>
+      <Id>2ab7ae26-950c-46af-9129-b275b52b0c68</Id>
       <CommandString>[Set;Change;Edit] [the;uh;a;] Build [Output;] [Folder;Folders;Setting;Settings;Parameter;Parameters]</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -2601,7 +2789,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9c64918b-99c2-4487-85c9-2694661bde74</Id>
+          <Id>75b315d3-966c-4d74-97e1-7531b94a6761</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2636,7 +2824,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c9efa452-958b-4f46-92eb-c18812cea1ba</Id>
+          <Id>90f75bdf-0c76-4a1a-b103-b99e990b014c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2671,7 +2859,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>53b1246c-5a63-4776-97eb-98a37bf5cf60</Id>
+          <Id>5a4a4f34-1758-419a-b00d-711556aef000</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2706,7 +2894,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2755a4da-9474-4cb0-9465-1b44eeb6172b</Id>
+          <Id>0a0a8012-3aba-4926-9733-795111013198</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2741,7 +2929,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>302dfb06-dce9-41ec-a939-b18649835c6d</Id>
+          <Id>fcbd0c80-2856-4225-bd85-9a03fc32ce45</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2776,7 +2964,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ea4f6d33-13e1-4ccb-801b-1fe5be5299a5</Id>
+          <Id>9e6a7ec7-b2fd-4d45-a540-2a2016eb76b7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2811,7 +2999,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2f7c7e8e-8a69-4c46-82c1-5f8d99317f40</Id>
+          <Id>8ec692ac-6431-42c1-bf13-9f35a11bdb32</Id>
           <ActionType>IntSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2846,7 +3034,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>461c0376-4edc-4398-8bfe-8620d5943e27</Id>
+          <Id>5ab7d013-429e-4fc7-ade8-15212664fb6e</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2886,7 +3074,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b2292692-74f0-4955-9cd6-7fae7c796332</Id>
+          <Id>91c8c64e-d542-4366-be02-e1e3f5de9493</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2923,7 +3111,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>afec1838-bbe8-4d41-b549-1e2289173c53</Id>
+          <Id>271c385d-4dd9-46eb-aca5-3851756d2a9f</Id>
           <ActionType>Convert</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2959,7 +3147,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>07bc515d-87da-4827-99db-8eb1f6168537</Id>
+          <Id>59170df1-fb07-4699-a479-82c8341822af</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -2996,7 +3184,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>082b10e4-33cb-4c11-90da-2c9ccd6653d3</Id>
+          <Id>bc7991a1-b0ee-4af0-a054-0b66cc2fb247</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3031,7 +3219,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f0342ed4-928a-48c4-a8be-937b13a87d65</Id>
+          <Id>ae3f4929-2ab8-466c-99d1-84673773224e</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3066,7 +3254,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>85c36acc-45e5-4266-a4ca-f0a290876cbd</Id>
+          <Id>ec3eab0b-1414-4781-9ad0-e072f4a6ed74</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3101,7 +3289,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>7143074c-3498-44a5-b683-2953d190bcd1</Id>
+          <Id>1a6ce97b-9ac0-406d-b709-dfb635a3271c</Id>
           <ActionType>Jump</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3136,7 +3324,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>651d62db-9ddc-4741-b204-f877331dac06</Id>
+          <Id>2cbf6b92-8369-4d12-86cb-37e7a924a9cc</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3170,7 +3358,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d7028178-a642-4cd5-a161-0caa4decbbfb</Id>
+          <Id>ee3eb973-9409-4666-9839-d17d80558666</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3204,7 +3392,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0f9d7d1c-8cdf-4215-8532-70b43158184c</Id>
+          <Id>70eebbb3-036e-4f3c-9aca-c49b36c60205</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3239,7 +3427,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>a2d93632-b922-4d46-b995-b0891c8f7a58</Id>
+          <Id>1349702c-ff61-41c3-902b-dce525f83a7a</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3274,7 +3462,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>07fd52ea-1c43-418a-9a70-1d7eba8046ae</Id>
+          <Id>e51f7db2-49f7-4611-9bbb-2296902ef641</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3314,7 +3502,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d19650a2-23a8-4d3f-80a6-ff1377770e1f</Id>
+          <Id>1771a98d-8a47-434c-b22a-a607ad5c53c8</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3354,7 +3542,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>a035afa9-8f95-4db0-96ab-0a1815f217f6</Id>
+          <Id>0de5ab30-f927-4d9b-ae8d-d03eabb6547c</Id>
           <ActionType>GetUserList</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3393,7 +3581,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>15eb8e5e-5036-4a08-88ea-39a459fd0662</Id>
+          <Id>3eb4bcc0-151b-4338-8a7c-e3c936ec3c41</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3430,7 +3618,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f1256f51-fe7f-42c0-bd5f-21f24c3bba9a</Id>
+          <Id>eb51f1d8-e1cb-4e8a-9925-f4b23e538ebd</Id>
           <ActionType>Jump</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3465,7 +3653,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b0e33ba2-09f2-4604-a9e3-0f479e4127d4</Id>
+          <Id>0d07e3fb-4bb4-4321-8fa1-78cb68f2dd68</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3499,7 +3687,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>4286b4f9-576c-4516-9f02-88271f06f64a</Id>
+          <Id>ac3e1fa9-a6fe-4d91-9444-162ac0b7793f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3534,7 +3722,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2676033a-bd84-45f0-af97-202d005a54d7</Id>
+          <Id>9e7b7ef0-99c5-46cf-a8a7-8446a97ac3c8</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3569,7 +3757,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b01c68c9-0891-4269-b09c-fc09ff0434ea</Id>
+          <Id>029fc2da-901e-4220-9c7f-b64b97dcf2f4</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3609,7 +3797,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ab8b413d-5d73-46fe-948f-cf7c3536a3e4</Id>
+          <Id>06c962c8-4fba-4125-818e-e88a2fb6bde4</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3649,7 +3837,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>8d6249a3-f733-421b-a090-09f378c48a0a</Id>
+          <Id>52c2efca-bc51-4f33-b184-dbbb7dc0b7d7</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3676,7 +3864,7 @@
           <ConditionExpressions>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>695e72a0-0979-4903-bf47-e4e65aa6a48e</Id>
+                <Id>ad1b3e5e-63bf-4282-8f0d-52014f8578b7</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{STATE_DIRECTORYEXISTS:CORE_DEV}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -3702,7 +3890,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c18b3010-30dc-498b-8130-9f847e38a1b1</Id>
+          <Id>f171587d-8cc1-4e5f-9813-401ebb50af6e</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3742,7 +3930,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>31e13efc-9ed8-4268-9837-4a092b8a5e4c</Id>
+          <Id>9ed31686-3865-4e99-84e8-2871c899a2fe</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3782,7 +3970,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>745601d8-aca9-47a3-ae0a-855a2a19904e</Id>
+          <Id>85698e8f-ae39-4cbe-ad73-5ce3ea5b9117</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3809,7 +3997,7 @@
           <ConditionExpressions>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>02c57bdd-6caf-45d4-a5aa-33261507ea84</Id>
+                <Id>72efafa5-6861-4f79-bfdf-23e8783cfec8</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{STATE_FILEEXISTS:~dev_root}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -3835,7 +4023,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c0c3fcd6-dfd0-4938-80f2-847a26b91c04</Id>
+          <Id>8b57b25b-be77-4d8b-a101-f65b698e2c29</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3875,7 +4063,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>03cce1d5-f005-496a-8ed8-9238bbabfe9a</Id>
+          <Id>64f63dd1-5760-4da1-b7be-0b15ac583665</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3909,7 +4097,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>5e368083-de51-4d85-8d44-6b60da2e834e</Id>
+          <Id>65602f2d-70d6-4194-b99e-8ed716eb1b00</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3943,7 +4131,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>25c4e557-8cb5-4167-89e2-b778270900f6</Id>
+          <Id>dbc38f6f-bd6c-4d2b-9446-834a308c15a1</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -3978,7 +4166,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>009006b9-be20-4d99-980c-a7b3ccd4b179</Id>
+          <Id>e1987748-9002-4455-bfed-acd3ebd16007</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4013,7 +4201,7 @@
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>38b9e96c-658f-4163-81fb-d1947a33b5ee</Id>
+          <Id>0b82a167-d324-4b8b-bb9a-5f79a8873315</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4148,7 +4336,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>cd2766e8-d3fc-4e97-b30c-bf0d38679da3</Id>
+          <Id>24de4813-7ae4-4df2-aeb1-59fc43e8b9f3</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>1</Duration>
           <Delay>0</Delay>
@@ -4175,7 +4363,7 @@ public class VAInline
           <ConditionExpressions>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>7b5cd5dd-79ce-40f4-804f-e14a54b094f8</Id>
+                <Id>4bfd2546-f71a-483a-a2a3-fe1899fb56b3</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{STATE_DIRECTORYEXISTS:AVCS_CORE_BuildOutputFolder}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -4188,7 +4376,7 @@ public class VAInline
                 <DecimalContext1>0</DecimalContext1>
               </ConditionStruct>
               <ConditionStruct>
-                <Id>d4b0f361-d92a-49b9-a600-6c1749a1fd41</Id>
+                <Id>fc38747e-ca58-46c6-adb1-c683ef98a617</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{STATE_DIRECTORYEXISTS:AVCS4_BMS_BuildOutputFolder}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -4214,7 +4402,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>830bc8fb-0ac9-4a6d-820a-f3ab13d5fa19</Id>
+          <Id>cba123bc-de56-41a3-a160-61f2f96d8f81</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4251,7 +4439,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f3c3b16f-1116-45dd-993a-fa06858e691c</Id>
+          <Id>f38a1f11-b6c7-414e-86f7-641b0e6dd845</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4285,7 +4473,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>64048e1b-ece4-41cb-ba4f-07362c022e1b</Id>
+          <Id>817eefa7-fea7-4d6b-9aa1-767d550b2dd5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4320,7 +4508,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b66efa4c-b0b5-4a66-b86b-02fdfd1fb7ab</Id>
+          <Id>8723c3d4-57f6-476c-abae-d42649191cca</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4355,7 +4543,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>148a22f6-8958-4fce-abae-5ec531f5fc21</Id>
+          <Id>7616493b-225d-42d2-aa26-9d5b6cc1746e</Id>
           <ActionType>Marker</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4390,7 +4578,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2dd6ea00-8f8a-4143-9820-7652dc7229fd</Id>
+          <Id>f98cef42-da84-4605-aaff-a024d508b65c</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>1</Duration>
           <Delay>0</Delay>
@@ -4417,7 +4605,7 @@ public class VAInline
           <ConditionExpressions>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>38cccd52-c648-472b-a015-ee49f8720fca</Id>
+                <Id>5b1cf3c7-5d87-4bd9-88ff-4675649e6a5c</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{STATE_DIRECTORYEXISTS:AVCS_CORE_BuildOutputFolder}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -4432,7 +4620,7 @@ public class VAInline
             </ArrayOfConditionStruct>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>6c6f8629-57fb-4cf0-a29d-1467c7006d28</Id>
+                <Id>1f0d12b8-5c51-4251-99e3-5b0d2b764c19</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{STATE_DIRECTORYEXISTS:AVCS4_BMS_BuildOutputFolder}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -4458,7 +4646,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9f567785-27ed-4376-b3dd-678f9af72c3c</Id>
+          <Id>3f84c94b-e8c2-4dc2-9e9c-e5b35fe786bf</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4495,7 +4683,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2f3c7525-1117-4f29-af4a-4461a06bf5c9</Id>
+          <Id>75790271-4cf7-483c-b2a4-3879c47ad5e4</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4615,7 +4803,7 @@ public class VAInline
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>d12552c1-8bac-462e-81d3-ee474c857910</Id>
+      <Id>02ce1651-2e8e-437f-b17e-280b28de1d2d</Id>
       <CommandString>[Create;Generate;Make;Build] [the;uh;a;] [new;] [Resource;Resources] [branch;build;build branch;branch build]</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -4627,7 +4815,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f02f2240-7995-41e4-8889-918be7b5e15a</Id>
+          <Id>4e2af9c8-dc83-4140-9220-7d292666a2b5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4662,7 +4850,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ff87edc5-0398-4dc2-9613-1609df0e3788</Id>
+          <Id>3cd6e18d-653f-4541-9a56-b2c0bc6509c7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4697,7 +4885,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>91bdfe17-6943-4d9a-a495-6764feac1d55</Id>
+          <Id>5812090e-1de5-494c-8015-dcf3795aca61</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4732,7 +4920,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>99042daf-5af8-4a95-9d1f-53fe4830174d</Id>
+          <Id>d3177fb5-646b-4515-9162-36e3bbe7f03a</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4767,7 +4955,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c0aeb83a-44b0-4972-921d-8368ddab3dd1</Id>
+          <Id>5af684e1-c3a5-4d96-8710-8abb83559766</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4802,7 +4990,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>4b6d4371-a922-4062-b261-fd932e4c2d2e</Id>
+          <Id>bd057313-7b38-4760-b228-9e6305127de4</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4829,7 +5017,7 @@ public class VAInline
           <ConditionExpressions>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>c381f61d-3d0d-4c15-9918-c9fc1bef2233</Id>
+                <Id>c90db05b-64df-47c8-a089-a04d4f864e34</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{STATE_FILEEXISTS:~avcs_profiles_list_path}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -4855,7 +5043,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b7e6f4e8-00b2-4061-9579-350ca6db5535</Id>
+          <Id>ab4fd56b-c3f3-4a3f-8212-d1907d6e2d6c</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4892,7 +5080,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ec1ecfe0-c356-4e79-8fb2-b2a81c6e006e</Id>
+          <Id>4b8d740e-559b-41cb-b620-bf1104e224cf</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4927,7 +5115,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>fbbb014e-ef45-44b3-be55-21ab02e76e4e</Id>
+          <Id>db3be849-de65-4036-9ace-9238fb7ca4dd</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4961,7 +5149,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>a5d10c09-e2b1-442b-8d2e-7cffda78f72d</Id>
+          <Id>01b19ca5-7646-42bf-9dd4-71ef7d5e63e0</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -4996,7 +5184,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>34550351-1309-40c8-a68e-d54d1421b06a</Id>
+          <Id>337af9b4-ba31-473f-bd1e-8bc5adbee728</Id>
           <ActionType>GetUserList</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5035,7 +5223,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2c6706e1-f832-4a1b-9474-53d2937c1a08</Id>
+          <Id>b07af13a-af9e-47d1-8ebc-1d408fa0ccdc</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5072,7 +5260,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>8c711e2c-272f-4d68-88b4-4df9a3fdce3b</Id>
+          <Id>97b18f47-49ff-45a5-94e0-8500ff5bf632</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5107,7 +5295,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>6250a897-d325-404d-bc2a-ea4718d5f7e0</Id>
+          <Id>2d5316aa-f1fa-480a-b3c1-716f72f0cfe9</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5144,7 +5332,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>3da8f85b-95e8-4e94-9716-4ebeac8b8832</Id>
+          <Id>a884931d-9459-4bbb-83ee-cdda3123da16</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5178,7 +5366,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>8294b77a-7cba-4745-ba86-652dfda51842</Id>
+          <Id>dfcb9109-0fd5-4816-b4cc-12bf146d4abe</Id>
           <ActionType>GetUserInt</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5218,7 +5406,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0aab6e60-84fb-4011-9fa6-8e32043dae82</Id>
+          <Id>810c2eff-3a7b-4653-be45-f25b92705076</Id>
           <ActionType>IntSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5254,7 +5442,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9aff4e31-a2b8-4f56-aed9-9f395a87cf89</Id>
+          <Id>b6bf866b-7802-46e8-8a1e-8af2711cf1da</Id>
           <ActionType>GetUserInt</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5294,7 +5482,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>952d32d7-e398-42ff-92a4-64c5cb23c7d6</Id>
+          <Id>9bb5699d-64e5-496c-9be0-e4a7e9973129</Id>
           <ActionType>GetUserInt</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5334,7 +5522,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ff065f3b-15e4-45d8-8712-7b13ca53447f</Id>
+          <Id>2d32d9f3-3848-4cbd-a9a4-1240b04bab93</Id>
           <ActionType>GetUserList</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5373,7 +5561,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>7b5b4280-6bb8-494e-b622-a46663e6e9e5</Id>
+          <Id>0cee88d3-c251-4250-8613-64c032170ae7</Id>
           <ActionType>GetUserText</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5411,7 +5599,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>e61d2c0e-b7fd-4655-95dc-704df3b3e561</Id>
+          <Id>4b556cb5-e159-462f-924a-0554e84e865c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5446,7 +5634,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d0396e17-b445-4d55-9937-da67ee8abc28</Id>
+          <Id>ac11a0a4-6951-4e37-969a-f4772ab95fd2</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5481,7 +5669,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>8b9104eb-1e23-4ba8-85a9-916129765280</Id>
+          <Id>915b89b2-5651-470a-8342-a2e9fdfeb3c4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5516,7 +5704,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ba357f0e-14e9-4280-a93f-ed2be27052f7</Id>
+          <Id>550eabbf-6530-4971-9240-00e275f90100</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5551,7 +5739,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d91feefb-fde3-43e2-a7ee-0ffdd6a4342c</Id>
+          <Id>5a96152b-2a73-4a26-92c9-2b8a6a210072</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5591,7 +5779,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>a423ab6e-f951-44a7-a183-ddadb3ce1f36</Id>
+          <Id>6f77ccca-9dfb-4686-9971-0bdb1bce0e2d</Id>
           <ActionType>InlineFunctionPrecompiled</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5627,7 +5815,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9934e2df-d880-4803-aa42-eb53278b1dcf</Id>
+          <Id>ae3ef4e2-eb77-4b11-8fe0-2a094b698000</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5664,7 +5852,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>e7c70ea5-92aa-42d6-bd93-acc5adc039d7</Id>
+          <Id>fe3cc54f-5fd0-4f27-a314-c3b0802fa96a</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5699,7 +5887,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>3d92a650-867c-43ed-9e72-0199df1abf7e</Id>
+          <Id>a0d2e367-3c3f-4930-b918-5e75ffb1472d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5734,7 +5922,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>bb03c025-8687-4c7a-9457-9a87871ff0aa</Id>
+          <Id>f441e631-7512-4820-b6ec-295ba680a44d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5769,7 +5957,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0fc20631-0c77-4f13-b10d-d5fe6db98d8e</Id>
+          <Id>59103a21-dcf7-481a-8912-649b6f4a1d01</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5890,7 +6078,7 @@ public class VAInline
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>3ba2a853-f16d-4baa-a607-d49314987e85</Id>
+      <Id>52432296-1eb5-4165-aa59-3be8c9109725</Id>
       <CommandString>Push [the;uh;a;] [new;] Build [to;too;two;2] [the;uh;a;] [Web;Website;Web Server;Server;Host;Hosting] [folder;folders;database]</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -5902,7 +6090,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>400f8467-937b-4387-bf0f-cded2aa4ec70</Id>
+          <Id>8a181b25-ac92-48b1-9b72-3627029c914f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5937,7 +6125,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>bb36ba8d-7e18-436c-8c40-854ea27731c1</Id>
+          <Id>6a0c6edc-5944-435f-b21f-b4b24c0aaa1e</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -5972,7 +6160,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>92c4f418-8300-40cf-8511-cf9b7084af54</Id>
+          <Id>c743ac0a-ee58-4e51-b782-da9bbf774b44</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6007,7 +6195,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>159734b8-c317-470d-9f43-2682b91afc27</Id>
+          <Id>096a103a-ed07-4d7d-b91c-d76747cdb1a3</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6042,7 +6230,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2a5d6f7c-91ec-4807-a63d-c175652979a0</Id>
+          <Id>8b1192e3-d152-4c3e-8ea8-8ce3608a2d08</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6077,7 +6265,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>e3b628d5-6edb-46c5-83c6-78e073e85310</Id>
+          <Id>27a8f340-3a75-47f4-8aaa-72ad15bff307</Id>
           <ActionType>ConditionStart</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6104,7 +6292,7 @@ public class VAInline
           <ConditionExpressions>
             <ArrayOfConditionStruct>
               <ConditionStruct>
-                <Id>0fdf8ec0-1f8b-4f45-aad8-89312d3d133b</Id>
+                <Id>305b6d57-5724-4939-82fa-62ddfc653ddb</Id>
                 <ConditionStartType>1</ConditionStartType>
                 <ConditionStartNameFrom>{STATE_FILEEXISTS:~avcs_profiles_list_path}</ConditionStartNameFrom>
                 <ConditionStartValueType>0</ConditionStartValueType>
@@ -6130,7 +6318,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9ea7be20-f2a9-4d52-9259-2b0df6e642a5</Id>
+          <Id>f7bbd79d-1ce7-44a0-a474-869049cab52c</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6167,7 +6355,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>26539200-3000-4f50-b624-a13bab5aa5dd</Id>
+          <Id>df51c201-5c3b-43bc-ae5a-568123a87784</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6202,7 +6390,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>7427b3e7-2ecd-4125-836f-69805e3c1487</Id>
+          <Id>4eaf8201-404d-4cad-9c52-f3cad505e707</Id>
           <ActionType>ConditionEnd</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6236,7 +6424,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ef5676a6-95fe-4a3f-b8da-075c2d896ead</Id>
+          <Id>8251c173-2fa5-4b91-9b7f-a0fbe61a7782</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6271,7 +6459,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c1b1c53e-c379-4af3-bee0-2a1fce73af27</Id>
+          <Id>8ba03cd0-3d30-4609-94a0-75c754118b76</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6306,7 +6494,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0abd7e2c-fd25-470a-a070-60f363714908</Id>
+          <Id>f1b9b0ec-3bc8-4dbe-af92-20a0685fccdd</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6341,7 +6529,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>7aa1750a-73d6-4f8e-8464-c7bae826f511</Id>
+          <Id>370877c1-1077-4f8a-a3a6-8209724bf639</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6376,7 +6564,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>899eefb3-2746-42e3-bfa1-4446539e8553</Id>
+          <Id>a08052b3-1f39-45f0-a4b4-e030375bf3bc</Id>
           <ActionType>TextSet</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6416,7 +6604,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2cc33b7e-42c0-4748-a3c4-cf465a04d28b</Id>
+          <Id>7c52a489-5c23-4aa3-bbb5-cf4abfd23adc</Id>
           <ActionType>InlineFunctionPrecompiled</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6452,7 +6640,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>bc80c35a-b1d3-4225-aecc-7ce0c7e24aa9</Id>
+          <Id>77c87134-6cfd-49d8-beba-a2cc849d2853</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6489,7 +6677,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>028ad3e8-4afc-4c6c-b154-8adf4cd65778</Id>
+          <Id>814c89d5-9751-4027-b2be-97f4f5b579ef</Id>
           <ActionType>WriteToLog</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6524,7 +6712,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b37bdac9-6998-48df-8682-47517782d5c0</Id>
+          <Id>8f83fe7c-5d04-441d-8943-789ca820ca08</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6559,7 +6747,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9b4dad74-dec3-401a-b4f6-e70b3a745e98</Id>
+          <Id>38954396-7f60-4e71-aa99-f38428c4c156</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6680,7 +6868,7 @@ public class VAInline
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>4804c031-7b70-4cb5-9769-af775e92738f</Id>
+      <Id>ece197ab-806b-43ef-b11e-1ea8c311f5b3</Id>
       <CommandString>(( -- AVCS CORE -- Build Output for Compiled Inline Functions -- ))</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -6692,7 +6880,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>475571b0-e289-42c0-8f4b-01a82b790705</Id>
+          <Id>1e23def8-6c2e-41ba-8fbf-754d9b084ba6</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6727,7 +6915,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>adbdbf49-9a47-48d5-91aa-069047c32095</Id>
+          <Id>2fa44069-db11-4bbf-96e0-3a6287bb3e09</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6762,7 +6950,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>30f3f67c-2130-455a-bd8d-214250d48b44</Id>
+          <Id>3973f71b-27c9-4190-b3b3-a6b44a6e53d0</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6797,7 +6985,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>617f1dab-22de-4204-b60f-52f3fc0b57a0</Id>
+          <Id>bbad8e3a-ef1e-43cc-b078-64eea95f6d86</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6832,7 +7020,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>a42e9ed2-c47f-4805-a087-c25a07e2dc24</Id>
+          <Id>c196f0a5-4e9e-4c50-93e8-958fe213c0a9</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6867,7 +7055,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>605caa36-8c0d-47a4-b0ca-7eb6585278f8</Id>
+          <Id>7c2005a3-38c6-449e-95d0-25ccf56fb0b3</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6902,7 +7090,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>de9a1515-6ce1-4dd1-bf18-e78c9730ba4c</Id>
+          <Id>a9005a94-b091-43a0-abdc-01529d690f63</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6937,7 +7125,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>42ab8d47-a9f9-4497-b553-d0523ffe91ef</Id>
+          <Id>525920a4-4767-4eca-ba47-ffa831b23896</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -6972,7 +7160,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2eded2ad-46f5-49bf-abd1-3b09ce14ecc2</Id>
+          <Id>23b3e623-809c-4284-8730-ddd75abd8c5a</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7007,7 +7195,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>398057cd-2d74-443e-b384-19b1dc9f8dfe</Id>
+          <Id>4058ad46-8784-49be-acba-65097d39af4c</Id>
           <ActionType>ExitCommand</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7041,7 +7229,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9faff4e0-bffe-48f3-8318-bec2b3103184</Id>
+          <Id>ae857e17-cc81-4001-81a0-89f9cb97cd9d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7076,7 +7264,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9182a303-730a-4735-b1f3-7a6d038db3f0</Id>
+          <Id>bc631c16-0353-46e6-8806-10098d9ffbe4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7111,7 +7299,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>db64bc63-f804-4d51-b47e-5191499e16da</Id>
+          <Id>202b40a0-6e4f-4cd3-8245-ba55561e8f11</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7146,7 +7334,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b97d9c16-f82f-459d-a196-f352b8fc18da</Id>
+          <Id>a64ad91a-0fb4-48c8-83cc-f8ea84bdd602</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7181,7 +7369,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>2c67a98b-106e-461f-b77a-5282d420d039</Id>
+          <Id>1f12b7b6-4c94-47a5-8162-b72b19318395</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7216,7 +7404,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9ac7aedc-a508-439c-a1f6-db650bf4976d</Id>
+          <Id>9641a510-cb9b-4ca8-b5a8-0ea289130b8f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7251,7 +7439,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>5ccd208c-9e0e-4bb1-97c0-2a65f58d4448</Id>
+          <Id>0e0082de-3d53-4bfb-9b87-fa7c4dd19f4b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7286,7 +7474,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>603adf30-d99b-42b3-8673-7a50b6445183</Id>
+          <Id>4d9ffe54-657a-4535-9267-1e96f2bcba9f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7321,7 +7509,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>e913a9c6-42ff-4556-ab95-5fdd26af289d</Id>
+          <Id>5f8b01d9-0967-4a26-8cb9-84dc34fd5d8d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7356,7 +7544,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>6e156a39-0706-4168-819f-1fa54440515e</Id>
+          <Id>a8c3730e-021d-4433-a128-52ea361a7c91</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7391,7 +7579,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0fea7b1d-29e8-456c-a21b-b25f2466fd1d</Id>
+          <Id>7414d4db-3b4e-4501-8263-55feeaeb62d0</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7426,7 +7614,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>db3d717e-c0a7-4b87-adc6-a62976169498</Id>
+          <Id>533beac9-dcbf-4983-a8c9-72cd33cf07c2</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7461,7 +7649,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>be696266-c3a6-4a93-bcfa-cee75c6810fe</Id>
+          <Id>79b44b17-544d-4246-8313-e5a9cc08ddc7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7496,7 +7684,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>fad04fee-b3e5-4e3d-87f9-a60924366342</Id>
+          <Id>0cee5cc8-52f9-432c-98f4-9fb14a92de35</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7531,7 +7719,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>acc3a105-f7e8-4522-9e53-ca0f430b3323</Id>
+          <Id>34031828-e041-41c4-a82a-fc4aed5d93df</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7566,7 +7754,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>ba3bd6c6-c2a8-448b-9570-f655164e57b3</Id>
+          <Id>4d9aa5a3-a752-4977-bb87-5b9c639b85be</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7601,7 +7789,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>77b183e0-488a-41f7-913e-cfc5255f264d</Id>
+          <Id>a464075c-5d40-49f0-92f0-5c9f90e80e91</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7636,7 +7824,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>8599b132-83dd-4d0f-8ba5-53558a5672d9</Id>
+          <Id>df9067c6-10dd-45db-a077-e4724b7ae241</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -7671,7 +7859,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>4f957d43-ba11-4c49-8cb8-8fdfe105f439</Id>
+          <Id>3798daf9-b7a8-4ce5-9fbb-1ba6929ae9e6</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -9804,7 +9992,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>20f9b217-1da3-4687-aab8-88084ce71abe</Id>
+          <Id>d8522717-8ef8-4bff-b5ac-1787a15068ad</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -11937,7 +12125,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>dc68e606-6368-4fc9-8d34-44c2b51e0964</Id>
+          <Id>d677ede2-8025-45e6-986b-d7847058efac</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -11972,7 +12160,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>690ae8c3-3a86-46e2-af7c-625a1827eb11</Id>
+          <Id>059fcd18-729e-42b6-9a8e-e0eed42b7115</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12007,7 +12195,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>1ceb14a9-8245-4c04-96ac-c9b790b5c913</Id>
+          <Id>8e6cb764-1924-4e0e-b1f9-16dd892b3fdb</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12042,7 +12230,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c9a31359-23f2-4fc0-879e-04541eceedc3</Id>
+          <Id>2c8dad86-f3e8-4099-8f39-abe1c3d697ff</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12077,7 +12265,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>1f1c7013-2b6c-46cf-b64b-5e83e77e9b96</Id>
+          <Id>e9d9e831-ed52-4822-9a3a-584b5178fe48</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12112,7 +12300,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>1cf9138f-ac9a-43d0-b157-bd354d4cdd45</Id>
+          <Id>6339f1b7-d9ae-401c-baeb-f26b1fdf022f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12147,7 +12335,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>f1d85ba7-dcad-4d92-b78e-8df9b4a53e22</Id>
+          <Id>04916afd-aa2f-44e1-99ca-e77e5cdd029c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12182,7 +12370,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9d1f75ac-989b-4446-aeb0-af6569791af9</Id>
+          <Id>b2b62850-b1e0-4be3-bcca-6e2afd58eda0</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12217,7 +12405,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>7c6621c1-f2ed-4670-a636-3d71640b12dc</Id>
+          <Id>81ea8616-ae05-4594-871d-6ad38af52a92</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12252,7 +12440,7 @@ public static class Native
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>fd7fc672-690a-49e1-94eb-903ba2d82fa6</Id>
+          <Id>8e686090-7666-436d-98c9-b131de0ad9c1</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12609,7 +12797,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b4640048-fabf-48d0-95c5-1bed0f86aac2</Id>
+          <Id>aa71d43a-0340-492b-a4db-1632e91d0aa2</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12644,7 +12832,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>9528b214-fce1-4bf4-856c-37e8bf477ebd</Id>
+          <Id>c8290e8b-073b-4f02-a6a3-87b966f76422</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12679,7 +12867,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>995dc25c-a93d-4a60-a2aa-8affa2551a77</Id>
+          <Id>0c7e6cdb-5df0-4ef6-b1c8-af53882297c8</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12714,7 +12902,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>580de962-1cd1-415f-b935-31fd9c5dabc1</Id>
+          <Id>00f9dd87-c729-49c0-97a9-f37218400abd</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12749,7 +12937,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c21f2b59-b077-4134-aa28-0678112ab90c</Id>
+          <Id>60d7571e-7849-4e89-8715-a0b1a109a836</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12784,7 +12972,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>22cdba12-fd17-42c9-bb8c-49c8bf19abad</Id>
+          <Id>b28f7029-199c-43f2-ada4-254ebbd25810</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12819,7 +13007,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>00556137-f865-471f-aa29-76b1fd1d45e1</Id>
+          <Id>04942abe-b523-44c5-a95f-45e64902626c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12854,7 +13042,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>87a9df8c-1cad-4884-87f0-a51a347f1f26</Id>
+          <Id>50261d26-7a97-40fc-917c-88eadb5bc71f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -12889,7 +13077,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>50368f65-2e06-47f5-888b-b99edb3696a7</Id>
+          <Id>715098a4-26eb-40be-b979-c154ed012292</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13073,7 +13261,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b62dd9be-43ad-4515-a46d-b89817a27f4a</Id>
+          <Id>10131a47-5265-49b6-b832-09778941e9c2</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13108,7 +13296,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>217a28ba-36f2-406e-850b-96c562ec74ed</Id>
+          <Id>58bcf09d-c17d-4597-ae3a-8b75fcd870db</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13143,7 +13331,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b840233b-29a6-46ba-8bc0-5dcc3566ff11</Id>
+          <Id>b10595a2-1235-4ca4-a4af-f3c73498e1d8</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13178,7 +13366,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>536b3cbc-cc72-4980-98cb-d7651b021763</Id>
+          <Id>36e235b9-b87c-4f2c-83bd-facde9c8b4cf</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13213,7 +13401,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d35e29e4-97eb-4238-9e6d-1b97dc37d6dd</Id>
+          <Id>c4e7d693-9074-4631-bd86-dea6a04de142</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13248,7 +13436,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>79657ed3-c229-4552-ab18-e7069de198f5</Id>
+          <Id>7b1c5441-f4c8-4424-bd3a-dd4b0d862052</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13283,7 +13471,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>efb31e1b-b3d4-42fe-92e0-91f22f375716</Id>
+          <Id>bbb44498-6905-4cda-a170-795d3c53a538</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13318,7 +13506,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>b28f94d4-adc8-492e-ba79-4a790c035ae2</Id>
+          <Id>618fa744-d611-4f7f-a99c-8797b02b0e2d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13353,7 +13541,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>70a005ec-6c3a-40c3-8c6b-af8f1a3636cd</Id>
+          <Id>950ea347-fc92-486a-ae1a-3d47cdeda783</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -13388,7 +13576,7 @@ public class VAInline
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>e92843d1-9822-4bfa-bb9e-7ef4deb2c44f</Id>
+          <Id>2f1df00d-5170-4cd1-99fd-2f5533f83581</Id>
           <ActionType>InlineFunctionVB</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14070,7 +14258,7 @@ End Class</Context>
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>c83ac6f1-b83c-4002-97a3-744efcd4466f</Id>
+          <Id>67dd2512-ccd1-42b3-a5e0-6f6a64499269</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14105,7 +14293,7 @@ End Class</Context>
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>03db1923-2131-4b83-961d-66bd5662b2fa</Id>
+          <Id>0d8e2ba9-9858-4eee-8d63-1ded8ec42a89</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14140,7 +14328,7 @@ End Class</Context>
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d11dcc54-61e7-4358-92bb-4fe3130c230f</Id>
+          <Id>d1cc074c-3c5c-4447-ac79-dd85d07ea191</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14175,7 +14363,7 @@ End Class</Context>
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>d957d876-f62f-47ae-9a7b-5c8b97c25b3f</Id>
+          <Id>37cb64c0-aaed-4bc2-abd4-088ca6974661</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14210,7 +14398,7 @@ End Class</Context>
           <ConditionSkip>false</ConditionSkip>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
-          <Id>0ea10734-a2e2-4508-bf5a-593520c4ae71</Id>
+          <Id>2de40c10-9668-4410-ac54-cab3f17ae268</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14331,7 +14519,7 @@ End Class</Context>
       <LongTapInvoked>false</LongTapInvoked>
       <ShortTapDelayedInvoked>false</ShortTapDelayedInvoked>
       <SleepFlag>0</SleepFlag>
-      <Id>8a82dd63-8371-4c6d-9ffd-e7fa63e7bbae</Id>
+      <Id>444a800c-1c5f-42f9-b574-c1d6cb47fda2</Id>
       <CommandString>(( -- AVCS4 BMS -- Build Output for Compiled Inline Functions -- ))</CommandString>
       <ActionSequence>
         <CommandAction>
@@ -14345,7 +14533,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>/////////////////////////////////////////////////////////////////////////////////////////////////</Caption>
-          <Id>2dd3998c-7aaa-4b74-9c81-670e16050c88</Id>
+          <Id>3c78ae55-ea44-481b-97f8-2c0cb9a2f175</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14382,7 +14570,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>The following inline function(s) code is shared under GNU General Public License v2.0 - by SemlerPDX July2025</Caption>
-          <Id>020e87b3-8726-4ee7-8c03-9449d05cadb2</Id>
+          <Id>54309c22-fc71-445a-b627-1b0c58fe4db0</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14419,7 +14607,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>630f54a3-b0c4-4ace-b317-a5cb174895bd</Id>
+          <Id>e1b1af2f-cae4-4b4d-a707-d97697296f80</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14456,7 +14644,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>The GNU GPL is the most widely used free software license and has a strong copyleft requirement.</Caption>
-          <Id>d067a77c-a580-4dd4-bc6d-8add413f30df</Id>
+          <Id>9ccb8d38-0dcc-4e12-85e3-02368571f3d5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14493,7 +14681,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>When distributing derived works, the source code of the work must be made available under the same license.</Caption>
-          <Id>159a4070-2578-493b-8fec-06e16d8b54e0</Id>
+          <Id>debaad7f-46ca-49f7-b2ee-91110527cda3</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14530,7 +14718,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>There are multiple variants of the GNU GPL, each with different requirements. Find complete details for this license here:</Caption>
-          <Id>08ddfc1a-73e3-4d9c-bb78-70785345e453</Id>
+          <Id>2215c9d8-d975-4e65-b45c-df9729d151fe</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14567,7 +14755,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>     https://github.com/SemlerPDX/AVCS/blob/master/LICENSE.txt</Caption>
-          <Id>00d28ea4-98d1-4631-b391-6dfa602bd4f2</Id>
+          <Id>2566a516-f4c0-4f9d-a475-f848b3725198</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14604,7 +14792,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>/////////////////////////////////////////////////////////////////////////////////////////////////</Caption>
-          <Id>c465cbff-8856-4ecf-b1be-202371425929</Id>
+          <Id>a3dc7c15-f5b4-4fc8-afad-87df42bb8ea7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14641,7 +14829,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>170d1217-f178-46fa-a8af-ea12b103a9a5</Id>
+          <Id>07d64323-c9e9-4b32-96a2-40b68281cf50</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14678,7 +14866,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>Exit Command</Caption>
-          <Id>780d3055-ef22-4138-8681-5d288791e94b</Id>
+          <Id>610f3859-917a-4a50-8147-fc304b981f9d</Id>
           <ActionType>ExitCommand</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14714,7 +14902,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>/////////////////////////////////////////////////////////////////////////////////////////////////</Caption>
-          <Id>06aa62df-6522-47e2-a795-c3ffc34339f7</Id>
+          <Id>7414555b-eeda-41b6-ae47-b0b1fe537bec</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14751,7 +14939,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>                    /////////////      AVCS4 FALCON BMS SYSTEMS      /////////////</Caption>
-          <Id>0dea7563-1152-41e3-8291-f56a7b7999b2</Id>
+          <Id>24dfdd05-5486-45fe-8fad-7ec9f4d6826b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14788,7 +14976,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>/////////////////////////////////////////////////////////////////////////////////////////////////</Caption>
-          <Id>9d1fb0c3-334a-4ce5-97dd-307b79bb7d4f</Id>
+          <Id>8106bb44-16d2-4449-821f-97f49cc0532f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14825,7 +15013,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>16301b51-8765-46a6-a0b9-c6a16e40e19a</Id>
+          <Id>0aa0ddb8-6e00-41ff-9621-eb2f9e130486</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14862,7 +15050,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>  Run the command, "Set the Build Output Folder", if it did not run on startup/profile switch - it is required to build any inline below for the dynamic output path</Caption>
-          <Id>9b4b6272-5675-4096-ba8d-73c57447c60c</Id>
+          <Id>a9a7f538-d0cd-4769-a565-4bd77c2bb8c7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14899,7 +15087,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>1a1f4f83-e460-4cff-8c4c-8ead590c6405</Id>
+          <Id>a6ba35da-a179-40d6-9ebc-aa67098f0a69</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14936,7 +15124,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>ac28982b-4bcb-408f-94ba-c58afd92eb3b</Id>
+          <Id>665bac60-ba4b-4a1d-aae0-8c64960b590b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -14973,7 +15161,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>  !!!  IMPORTANT NOTE  !!!    Inline Functions must be built when running this profile in VoiceAttack V1 and V2 respectively  !!!</Caption>
-          <Id>b312f991-949a-462e-b2c7-7fe551527229</Id>
+          <Id>2cb46561-940b-40ec-b453-e5e1ecb5f15b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15010,7 +15198,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>      *inline functions which require different referenced assemblies will have two entries below*</Caption>
-          <Id>a164ebfa-b560-4a00-9f2e-c8a22baf0704</Id>
+          <Id>df49ee7b-b356-48af-b28f-3af56086e362</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15047,7 +15235,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>                    (( all inline function names in the build output will be appended with "_V1" or "_V2" depending on VA version running ))</Caption>
-          <Id>4181ba33-13a8-4af3-9b82-d3f99c50c687</Id>
+          <Id>4a355aa3-5766-4ecf-aef1-389541892d00</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15084,7 +15272,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>e701688c-9540-424a-a84f-32888488c768</Id>
+          <Id>9e7b19c2-85ad-4b9c-9aae-ea9c5250367b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15121,7 +15309,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>  To build output compiled inline functions with the suffix "_V1", you MUST be running this profile in VoiceAttack V1 and NOT the .NET CORE8 based VoiceAttack V2 !!!</Caption>
-          <Id>a3818c51-a168-400f-a25a-6943137ca4b4</Id>
+          <Id>cd13c28d-bdcd-481c-a748-93b65b432bb1</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15158,7 +15346,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>  To build output compiled inline functions with the suffix "_V2", you MUST be running this profile in VoiceAttack V2 and NOT the .NET Framework 4.8 based VoiceAttack V1 !!!</Caption>
-          <Id>4a938c5b-f355-417a-835b-0acb3ae764b2</Id>
+          <Id>4db8b8b3-9aaf-4aee-9ac4-370b5396b57d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15195,7 +15383,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>c1b1ecef-e72e-4988-a85b-dc9723dac792</Id>
+          <Id>4e23d801-a4f9-4582-bbdd-49314f98d78c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15232,7 +15420,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>6abee41a-82df-4303-ac2f-1bf0f495370f</Id>
+          <Id>1c8f21d3-ff1c-4781-91da-ab01be3362f5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15269,7 +15457,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_CheckFalconUpdates  -- Checks the currently selected Falcon BMS program folder Menu.dat file for changes/updates during profile init</Caption>
-          <Id>f648a191-140d-47b9-a98a-f938ba9527ef</Id>
+          <Id>2a2a3b8c-3fe6-4e12-b661-d9a70aa8c1fd</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15306,7 +15494,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>ebbae493-682c-43c3-b50d-ac070a76b422</Id>
+          <Id>1a6512be-4f42-4b8d-bc6f-1643ff785a24</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15343,7 +15531,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>b2b81b2e-bdaa-4fd7-8693-82c8406a3c23</Id>
+          <Id>57a23962-ad79-4de1-add7-d135d5fb2d25</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15380,7 +15568,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    NO</Caption>
-          <Id>14caec38-f79e-40ff-a922-e65e61ccf35e</Id>
+          <Id>cd8970db-1d7d-4abd-b8f7-a642f4298493</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15417,7 +15605,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_CheckFalconUpdates_V1, wait until execution finishes</Caption>
-          <Id>0340fa10-289b-4267-8224-ba80f463ad05</Id>
+          <Id>b4197590-32df-49c3-8345-6b8417e83e96</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15521,7 +15709,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_CheckFalconUpdates_V2, wait until execution finishes</Caption>
-          <Id>0204a98e-1a4f-48f0-b3ae-3009fe598f79</Id>
+          <Id>ec047301-6ed1-40e9-b553-c1f05b33d5f0</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15625,7 +15813,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>54513531-83b5-4c88-b583-a07796c9aed3</Id>
+          <Id>8bae5a61-c043-4d05-8233-1df8dfb1d1d4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15662,7 +15850,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>3cf7b9ed-d256-402a-a15c-2f0f26a265f9</Id>
+          <Id>6c3b25bd-7556-47ab-942e-bb44ebac7897</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15699,7 +15887,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>a35a5611-d36e-4334-9168-87d3a1caf4cd</Id>
+          <Id>b0c493f1-9fe8-42fb-8904-4a6fa0d4a62b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15736,7 +15924,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>49dd980a-5612-498a-8ddb-89bf3ac278e2</Id>
+          <Id>9623e46f-a5b8-4f1e-b80d-486fcada6ff5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15773,7 +15961,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_GetMenuData  -- Get the Menu.dat file from the currently selected Falcon BMS program folder</Caption>
-          <Id>eb3291b1-7b21-47fd-8dc1-9413f1e93228</Id>
+          <Id>8dcfcdbd-008e-4ffb-8685-6bc44da69886</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15810,7 +15998,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>a573ab5b-47e2-4b21-a1df-a734c52d37ca</Id>
+          <Id>b56d1187-31a0-4c26-b135-9120101cb939</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15847,7 +16035,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>d0415436-b0f5-4106-9649-fbdb4584ff6a</Id>
+          <Id>2fe629c3-e16d-424e-b626-522853a5ab97</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15884,7 +16072,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>873a4ada-88d8-474a-8d98-86a6e01869c5</Id>
+          <Id>ee426860-e560-4ca1-923e-beaf7d9c25b5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -15921,7 +16109,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_GetMenuData_V1, wait until execution finishes</Caption>
-          <Id>6eb8b333-a391-4934-af74-8c69a2f14889</Id>
+          <Id>1d9a4ec5-8e46-4e7d-990d-13945d57062b</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16098,7 +16286,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_GetMenuData_V2, wait until execution finishes</Caption>
-          <Id>ea591e71-5a7d-4de4-ba50-25f8ac933ac9</Id>
+          <Id>2a315bc6-da64-413a-9bd0-8dd395c19071</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16275,7 +16463,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>10d638c4-9128-498a-a642-661558ead6d1</Id>
+          <Id>4d9accba-7e2e-45e0-8234-5d09d1d4d6e0</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16312,7 +16500,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>ccb903fe-f400-4954-9c27-61005d695e8f</Id>
+          <Id>9628525c-2b64-410f-b3be-5dcbc8837ea1</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16349,7 +16537,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>a449db4c-9f8c-41e4-b80b-1f0cc90a5496</Id>
+          <Id>71f6ea62-16f9-416c-b739-08c6b11ab280</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16386,7 +16574,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>e655ed3a-b057-4966-80af-9a8e0c78feef</Id>
+          <Id>ee81465f-e954-489b-995e-341c2bbd37e8</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16423,7 +16611,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_RadioCommandsGenerator  -- Automatic Radio Command and HTML Reference Guide Generator</Caption>
-          <Id>c577c750-d2df-4cd9-8269-80b749fa33c3</Id>
+          <Id>7d36e03a-9a5c-4b71-a278-9fd6cca00ae4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16460,7 +16648,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>// This inline function is used to parse the Menu.dat file from Falcon BMS and extract configuration data into AVCS4 BMS Keypress Variables.</Caption>
-          <Id>44fb28ca-a3b0-473c-8ba3-c55100665da6</Id>
+          <Id>a4bdf72c-bfdb-4a47-9e92-08681ac26c1c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16497,7 +16685,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>3331aa93-0636-4553-848b-414662457ab8</Id>
+          <Id>d3af3ba2-0514-42d3-b7d1-59de611e6798</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16534,7 +16722,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>eb698752-f235-4cf3-959b-ab6c3178f2c5</Id>
+          <Id>baad2d60-b64e-435e-b9d5-b79828bce5bb</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16571,7 +16759,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>283369f4-a847-45df-8a17-b8e599c41f0b</Id>
+          <Id>05172657-218c-4fb1-8492-88e785014406</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16608,7 +16796,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_RadioCommandsGenerator_V1, wait until execution finishes</Caption>
-          <Id>3c19203d-4ce4-443a-ae23-c7ff1ca6466b</Id>
+          <Id>13cd7498-72fa-4e73-993f-0e7d1d1e01df</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -16643,6 +16831,11 @@ public class VAInline
 
 	private const string PhrasesConfigFileName = "avcs_bms_data_3.cfg";
 	private const string KeysConfigFileName = "avcs_bms_data_4.cfg";
+
+	private const string MasterTemplate = "commref_bms_master_template";
+	private const string AgencyBlockTemplate = "commref_bms_agency_block_template";
+	private const string AgencyPageTemplate = "commref_bms_agency_page_template";
+	private const string CommandItemTemplate = "commref_bms_command_item_template";
 
 	private static readonly HashSet&lt;string&gt; FlightMenus = new HashSet&lt;string&gt; { "WINGMAN", "ELEMENT", "FLIGHT" };
 
@@ -16697,43 +16890,27 @@ public class VAInline
 		var htmlOutFileName = VA.ParseTokens(@"commref_bms{INT:AVCS_BMS_VER_MAJOR}.html");
 		var htmlOutPath = Path.Combine(htmlFolderPath, htmlOutFileName);
 
-		var htmlMainTemplate = VA.GetText("~commandReferenceTemplate") ?? string.Empty;
-		if (string.IsNullOrWhiteSpace(htmlMainTemplate))
+		string htmlMainTemplate;
+		if (!TryLoadTemplate("~commandReferenceTemplate", MasterTemplate, "AVCS_BMS_COMMREF_TEMPLATE", out htmlMainTemplate))
 		{
-			VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_TEMPLATE is null or white space.", "red");
-			var errorMessage = "AVCS_BMS_COMMREF_TEMPLATE is null or empty.";
-			VA.SetText("AVCS_EX_MSG", errorMessage);
-			VA.SetBoolean("AVCS_ERROR", true);
 			return;
 		}
 
-		var htmlBlockTemplate = VA.GetText("~agencyBlockTemplate") ?? string.Empty;
-		if (string.IsNullOrWhiteSpace(htmlBlockTemplate))
+		string htmlBlockTemplate;
+		if (!TryLoadTemplate("~agencyBlockTemplate", AgencyBlockTemplate, "AVCS_BMS_COMMREF_BLOCK_TEMPLATE", out htmlBlockTemplate))
 		{
-			VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_BLOCK_TEMPLATE is null or white space.", "red");
-			var errorMessage = "AVCS_BMS_COMMREF_BLOCK_TEMPLATE is null or empty.";
-			VA.SetText("AVCS_EX_MSG", errorMessage);
-			VA.SetBoolean("AVCS_ERROR", true);
 			return;
 		}
 
-		var htmlPageTemplate = VA.GetText("~agencyPageTemplate") ?? string.Empty;
-		if (string.IsNullOrWhiteSpace(htmlPageTemplate))
+		string htmlPageTemplate;
+		if (!TryLoadTemplate("~agencyPageTemplate", AgencyPageTemplate, "AVCS_BMS_COMMREF_PAGE_TEMPLATE", out htmlPageTemplate))
 		{
-			VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_PAGE_TEMPLATE is null or white space.", "red");
-			var errorMessage = "AVCS_BMS_COMMREF_PAGE_TEMPLATE is null or empty.";
-			VA.SetText("AVCS_EX_MSG", errorMessage);
-			VA.SetBoolean("AVCS_ERROR", true);
 			return;
 		}
 
-		var htmlItemTemplate = VA.GetText("~commandItemTemplate") ?? string.Empty;
-		if (string.IsNullOrWhiteSpace(htmlItemTemplate))
+		string htmlItemTemplate;
+		if (!TryLoadTemplate("~commandItemTemplate", CommandItemTemplate, "AVCS_BMS_COMMREF_ITEM_TEMPLATE", out htmlItemTemplate))
 		{
-			VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_ITEM_TEMPLATE is null or white space.", "red");
-			var errorMessage = "AVCS_BMS_COMMREF_ITEM_TEMPLATE is null or empty.";
-			VA.SetText("AVCS_EX_MSG", errorMessage);
-			VA.SetBoolean("AVCS_ERROR", true);
 			return;
 		}
 
@@ -16860,6 +17037,95 @@ public class VAInline
 
 			return new string[][] { new string[] { }, new string[] { } };
 		}
+	}
+	private bool TryLoadTemplate(string cachedVarName, string pathVarName, string errorToken, out string template)
+	{
+		template = VA.GetText(cachedVarName) ?? string.Empty;
+
+		// Special case: if the cached value is actually a file path, ignore it and fall back to the path var.
+		if (!string.IsNullOrWhiteSpace(template) &amp;&amp; LooksLikeExistingFile(template))
+		{
+			template = string.Empty;
+		}
+
+		if (string.IsNullOrWhiteSpace(template))
+		{
+			var path = VA.GetText(pathVarName) ?? string.Empty;
+			template = TryReadTemplateFile(path);
+		}
+
+		if (!string.IsNullOrWhiteSpace(template))
+		{
+			return true;
+		}
+
+		// Standard error handling
+		var msg = errorToken + " is null or white space.";
+		VA.WriteToLog("AVCS ERROR: " + msg, "red");
+		VA.SetText("AVCS_EX_MSG", errorToken + " is null or empty.");
+		VA.SetBoolean("AVCS_ERROR", true);
+		return false;
+	}
+
+	private string TryReadTemplateFile(string path)
+	{
+		try
+		{
+			if (string.IsNullOrWhiteSpace(path))
+			{
+				return string.Empty;
+			}
+
+			if (!File.Exists(path))
+			{
+				return string.Empty;
+			}
+
+			using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+			using (var sr = new StreamReader(fs, Encoding.UTF8, detectEncodingFromByteOrderMarks: true))
+			{
+				var fileContents = sr.ReadToEnd();
+				if (string.IsNullOrWhiteSpace(fileContents))
+				{
+					return string.Empty;
+				}
+
+				return fileContents;
+			}
+		}
+		catch
+		{
+			return string.Empty;
+		}
+	}
+
+	private static bool LooksLikeExistingFile(string value)
+	{
+		try
+		{
+			if (string.IsNullOrWhiteSpace(value))
+			{
+				return false;
+			}
+
+			var s = value.Trim();
+			if (File.Exists(s))
+			{
+				return true;
+			}
+
+			Uri uri;
+			if (Uri.TryCreate(s, UriKind.Absolute, out uri) &amp;&amp; uri.IsFile &amp;&amp; File.Exists(uri.LocalPath))
+			{
+				return true;
+			}
+		}
+		catch
+		{
+			// ignore and return false
+		}
+
+		return false;
 	}
 
 	private void LoadLineArray(string[] lineArray)
@@ -17608,7 +17874,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_RadioCommandsGenerator_V2, wait until execution finishes</Caption>
-          <Id>81f9ba14-a446-4cd7-89a3-66a9dc26ec00</Id>
+          <Id>4b476962-d317-4171-8c01-84d7ddff880f</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -17627,7 +17893,7 @@ Required Referenced Assemblies V1:
 Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Windows.Forms.dll;
 
 Required Referenced Assemblies V2:
-Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Collections.dll;System.Linq.dll;System.Linq.Expressions.dll;System.Security.Claims.dll;System.Security.Principal.Windows.dll;System.Windows.Forms.dll;
+Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Collections.dll;System.Linq.dll;System.Linq.Expressions.dll;System.Security.Claims.dll;System.Security.Principal.Windows.dll;System.Windows.Forms.dll;System.Private.Uri.dll;
 */
 
 /// &lt;summary&gt;
@@ -17643,6 +17909,11 @@ public class VAInline
 
 	private const string PhrasesConfigFileName = "avcs_bms_data_3.cfg";
 	private const string KeysConfigFileName = "avcs_bms_data_4.cfg";
+
+	private const string MasterTemplate = "commref_bms_master_template";
+	private const string AgencyBlockTemplate = "commref_bms_agency_block_template";
+	private const string AgencyPageTemplate = "commref_bms_agency_page_template";
+	private const string CommandItemTemplate = "commref_bms_command_item_template";
 
 	private static readonly HashSet&lt;string&gt; FlightMenus = new HashSet&lt;string&gt; { "WINGMAN", "ELEMENT", "FLIGHT" };
 
@@ -17697,43 +17968,27 @@ public class VAInline
 		var htmlOutFileName = VA.ParseTokens(@"commref_bms{INT:AVCS_BMS_VER_MAJOR}.html");
 		var htmlOutPath = Path.Combine(htmlFolderPath, htmlOutFileName);
 
-		var htmlMainTemplate = VA.GetText("~commandReferenceTemplate") ?? string.Empty;
-		if (string.IsNullOrWhiteSpace(htmlMainTemplate))
+		string htmlMainTemplate;
+		if (!TryLoadTemplate("~commandReferenceTemplate", MasterTemplate, "AVCS_BMS_COMMREF_TEMPLATE", out htmlMainTemplate))
 		{
-			VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_TEMPLATE is null or white space.", "red");
-			var errorMessage = "AVCS_BMS_COMMREF_TEMPLATE is null or empty.";
-			VA.SetText("AVCS_EX_MSG", errorMessage);
-			VA.SetBoolean("AVCS_ERROR", true);
 			return;
 		}
 
-		var htmlBlockTemplate = VA.GetText("~agencyBlockTemplate") ?? string.Empty;
-		if (string.IsNullOrWhiteSpace(htmlBlockTemplate))
+		string htmlBlockTemplate;
+		if (!TryLoadTemplate("~agencyBlockTemplate", AgencyBlockTemplate, "AVCS_BMS_COMMREF_BLOCK_TEMPLATE", out htmlBlockTemplate))
 		{
-			VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_BLOCK_TEMPLATE is null or white space.", "red");
-			var errorMessage = "AVCS_BMS_COMMREF_BLOCK_TEMPLATE is null or empty.";
-			VA.SetText("AVCS_EX_MSG", errorMessage);
-			VA.SetBoolean("AVCS_ERROR", true);
 			return;
 		}
 
-		var htmlPageTemplate = VA.GetText("~agencyPageTemplate") ?? string.Empty;
-		if (string.IsNullOrWhiteSpace(htmlPageTemplate))
+		string htmlPageTemplate;
+		if (!TryLoadTemplate("~agencyPageTemplate", AgencyPageTemplate, "AVCS_BMS_COMMREF_PAGE_TEMPLATE", out htmlPageTemplate))
 		{
-			VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_PAGE_TEMPLATE is null or white space.", "red");
-			var errorMessage = "AVCS_BMS_COMMREF_PAGE_TEMPLATE is null or empty.";
-			VA.SetText("AVCS_EX_MSG", errorMessage);
-			VA.SetBoolean("AVCS_ERROR", true);
 			return;
 		}
 
-		var htmlItemTemplate = VA.GetText("~commandItemTemplate") ?? string.Empty;
-		if (string.IsNullOrWhiteSpace(htmlItemTemplate))
+		string htmlItemTemplate;
+		if (!TryLoadTemplate("~commandItemTemplate", CommandItemTemplate, "AVCS_BMS_COMMREF_ITEM_TEMPLATE", out htmlItemTemplate))
 		{
-			VA.WriteToLog("AVCS ERROR: AVCS_BMS_COMMREF_ITEM_TEMPLATE is null or white space.", "red");
-			var errorMessage = "AVCS_BMS_COMMREF_ITEM_TEMPLATE is null or empty.";
-			VA.SetText("AVCS_EX_MSG", errorMessage);
-			VA.SetBoolean("AVCS_ERROR", true);
 			return;
 		}
 
@@ -17860,6 +18115,95 @@ public class VAInline
 
 			return new string[][] { new string[] { }, new string[] { } };
 		}
+	}
+	private bool TryLoadTemplate(string cachedVarName, string pathVarName, string errorToken, out string template)
+	{
+		template = VA.GetText(cachedVarName) ?? string.Empty;
+
+		// Special case: if the cached value is actually a file path, ignore it and fall back to the path var.
+		if (!string.IsNullOrWhiteSpace(template) &amp;&amp; LooksLikeExistingFile(template))
+		{
+			template = string.Empty;
+		}
+
+		if (string.IsNullOrWhiteSpace(template))
+		{
+			var path = VA.GetText(pathVarName) ?? string.Empty;
+			template = TryReadTemplateFile(path);
+		}
+
+		if (!string.IsNullOrWhiteSpace(template))
+		{
+			return true;
+		}
+
+		// Standard error handling
+		var msg = errorToken + " is null or white space.";
+		VA.WriteToLog("AVCS ERROR: " + msg, "red");
+		VA.SetText("AVCS_EX_MSG", errorToken + " is null or empty.");
+		VA.SetBoolean("AVCS_ERROR", true);
+		return false;
+	}
+
+	private string TryReadTemplateFile(string path)
+	{
+		try
+		{
+			if (string.IsNullOrWhiteSpace(path))
+			{
+				return string.Empty;
+			}
+
+			if (!File.Exists(path))
+			{
+				return string.Empty;
+			}
+
+			using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+			using (var sr = new StreamReader(fs, Encoding.UTF8, detectEncodingFromByteOrderMarks: true))
+			{
+				var fileContents = sr.ReadToEnd();
+				if (string.IsNullOrWhiteSpace(fileContents))
+				{
+					return string.Empty;
+				}
+
+				return fileContents;
+			}
+		}
+		catch
+		{
+			return string.Empty;
+		}
+	}
+
+	private static bool LooksLikeExistingFile(string value)
+	{
+		try
+		{
+			if (string.IsNullOrWhiteSpace(value))
+			{
+				return false;
+			}
+
+			var s = value.Trim();
+			if (File.Exists(s))
+			{
+				return true;
+			}
+
+			Uri uri;
+			if (Uri.TryCreate(s, UriKind.Absolute, out uri) &amp;&amp; uri.IsFile &amp;&amp; File.Exists(uri.LocalPath))
+			{
+				return true;
+			}
+		}
+		catch
+		{
+			// ignore and return false
+		}
+
+		return false;
 	}
 
 	private void LoadLineArray(string[] lineArray)
@@ -18574,7 +18918,7 @@ public sealed class MenuDatParser
 
 }
 </Context>
-          <Context2 xml:space="preserve">Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Collections.dll;System.Linq.dll;System.Linq.Expressions.dll;System.Security.Claims.dll;System.Security.Principal.Windows.dll;System.Windows.Forms.dll;</Context2>
+          <Context2 xml:space="preserve">Microsoft.CSharp.dll;System.dll;System.Core.dll;System.Collections.dll;System.Linq.dll;System.Linq.Expressions.dll;System.Security.Claims.dll;System.Security.Principal.Windows.dll;System.Windows.Forms.dll;System.Private.Uri.dll;</Context2>
           <Context3>AVCS4_BMS_RadioCommandsGenerator_V2</Context3>
           <Context4>{TXT:AVCS4_BMS_BuildOutputFolder}\AVCS4_BMS_RadioCommandsGenerator_V{STATE_VA_VERSION_MAJOR}.dll</Context4>
           <X>1</X>
@@ -18608,7 +18952,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>02d1cf65-d794-4db1-adcf-4ea79efd4bd9</Id>
+          <Id>ab8e9534-1c01-4f08-92ff-afa0b18ea19d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18645,7 +18989,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>a567816d-69e6-41e0-bad7-02b385d67f00</Id>
+          <Id>da70c331-a502-4ce6-bdd2-04c85ecaa937</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18682,7 +19026,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>7974d785-7d81-4fc5-9cba-9675a15cb22a</Id>
+          <Id>ac727ecb-15e9-4222-bc6b-d3ca811860f0</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18719,7 +19063,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>2fbaf802-9835-499d-9a40-1421e50c2e1f</Id>
+          <Id>615634c3-1d59-4a1d-b602-04e6ba7edcf3</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18756,7 +19100,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_GetAliasesFilePath  -- Get the local path to the global radio command aliases file under AVCS resources folder</Caption>
-          <Id>98e40e6e-69e9-4476-ab00-bfd0a0431880</Id>
+          <Id>70203600-fe46-4165-b4b4-4622faa21491</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18793,7 +19137,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>30138c8d-6bcb-45ea-afd2-6b1a66e6164a</Id>
+          <Id>5a2b5309-7350-4ce6-b98f-296466422dc7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18830,7 +19174,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>cbe17b1f-5af6-48dd-96c9-73cb64ff92b3</Id>
+          <Id>6bd65328-55d3-4266-b868-676aff43a9e2</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18867,7 +19211,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>dce23c3c-8e04-44f4-9783-5da576739ecd</Id>
+          <Id>8d32a009-57e5-4151-b513-6d6691b8ebda</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18904,7 +19248,7 @@ public sealed class MenuDatParser
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_GetAliasesFilePath, wait until execution finishes</Caption>
-          <Id>c113ac4d-f7f7-428b-94c4-90d1ec0044fe</Id>
+          <Id>8c28c308-9c77-45ae-8b0b-9c13f468032b</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -18975,7 +19319,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>757913d4-ec46-4000-92ee-8043bab28c88</Id>
+          <Id>00487219-d532-4084-8017-ef9d9f717ac7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19012,7 +19356,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>23925b91-f1fc-44d8-a618-8b6aadd115fd</Id>
+          <Id>963a70cd-35f8-472b-8559-ee88dc7d80d6</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19049,7 +19393,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>8b69e959-7aaf-4a0d-9ed3-6805695326c5</Id>
+          <Id>89cf7294-ccfc-4829-80fe-24f721a3ec66</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19086,7 +19430,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>65ce2db5-087a-4791-b64f-61900eeae232</Id>
+          <Id>49dd52d1-f2a7-44cd-bc54-8f8f5f1d6827</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19123,7 +19467,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_SplitAliasCommand  -- A tiny helper command to split key/value of a command alias data variable</Caption>
-          <Id>12f4314c-df3b-4347-986a-641ce6ff169d</Id>
+          <Id>4d6fed80-685e-4a5f-9ca8-cf3f3022c273</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19160,7 +19504,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>983905d5-4f63-4acb-aebb-bad358e74d87</Id>
+          <Id>1db74642-0149-49f8-b519-1ee8095c5863</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19197,7 +19541,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>a17f2338-22b4-4985-a7c3-e19955ebb182</Id>
+          <Id>17c15003-6095-49b8-b7e5-5e998c68dc0d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19234,7 +19578,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>5ab7cf8b-1673-48f2-8acc-cc9d3edb5fb7</Id>
+          <Id>efe87edd-93b1-452e-8a09-b60c341255c0</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19271,7 +19615,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_SplitAliasCommand, wait until execution finishes</Caption>
-          <Id>0617ecd3-8bd8-4422-841f-3e41415215d4</Id>
+          <Id>75d50aff-10a5-4b76-888d-5793c85b4419</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19336,7 +19680,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>f965a171-b85a-434d-a8f6-f063c9e84912</Id>
+          <Id>a77a82b5-d7fe-4e4c-8ac3-6ceda55fef2f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19373,7 +19717,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>4bc7e07b-978a-4fd3-8710-c266819526cf</Id>
+          <Id>af28e090-571a-41f4-b0bd-71169794d8d6</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19410,7 +19754,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>4da9514e-f3a4-4be0-950b-cef56f8717dc</Id>
+          <Id>e5dbedbd-530e-4789-a2bc-64d4b6094029</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19447,7 +19791,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>c0c2120d-199e-4c2d-be30-99dc2662310c</Id>
+          <Id>f6c2563f-e23a-4281-af54-dbbc7ec3cc59</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19484,7 +19828,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_SplitWildcardAliases  -- Split dynamic compound and wildcard commands into a semicolon delimited list of commands</Caption>
-          <Id>63a38750-1a84-408b-9dda-9fd74da4bb17</Id>
+          <Id>c6e9c023-3130-4606-9000-cf1ee6a1cd43</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19521,7 +19865,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>fbd9897b-4b2d-4e50-9f36-1ae65696c0a2</Id>
+          <Id>81ab6804-35c0-4c29-a061-7a59783074de</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19558,7 +19902,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>ad5781aa-35b3-4a11-8453-1d1164467761</Id>
+          <Id>32d74502-96eb-47b4-b133-d638512fceab</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19595,7 +19939,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>45d41d63-2757-4293-9648-8e0467f9cdf6</Id>
+          <Id>f2b48091-9265-4408-901b-be5697c7a4a4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19632,7 +19976,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_SplitWildcardAliases, wait until execution finishes</Caption>
-          <Id>14ffcf3d-0be3-4c93-8664-28d101f71b05</Id>
+          <Id>91f1b4c0-3647-4562-8355-ae6f061174d6</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19716,7 +20060,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>b5a284d7-014a-4089-86af-375dc686c54d</Id>
+          <Id>4ae0dfb3-3f64-4559-8754-c6eeedc1de67</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19753,7 +20097,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>a29b19cc-a616-4be1-8b43-a0cceea3e360</Id>
+          <Id>cf87a99a-3407-4db7-b5bb-cc8b0581fbb4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19790,7 +20134,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>e5bf00bb-c44a-4c14-9e58-a16412ec2064</Id>
+          <Id>a1039409-fc3e-4b5d-bb62-bb4a54f362d9</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19827,7 +20171,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>c410faa0-e8fc-4103-bcf7-0970570a2f7b</Id>
+          <Id>13285fae-6c24-4eed-859e-3653388e14a6</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19864,7 +20208,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_CheckExistingAliases  -- Checks new alias input againt existing commands for duplicates</Caption>
-          <Id>3085b43f-3faa-4a5f-8056-872610264eeb</Id>
+          <Id>9e0fcf2e-b243-40f5-a056-d78604d33127</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19901,7 +20245,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>ca505627-2c8c-41a4-8eb7-c78406209c24</Id>
+          <Id>70338da4-a494-4c61-9c69-e133d1b2c4fc</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19938,7 +20282,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>fa8eab2a-1355-49f9-8125-d559587ab58b</Id>
+          <Id>8609a083-6ac1-4ccf-8542-bcd1e0a51eb8</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -19975,7 +20319,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>9bb5e6fc-235c-4cdf-b6fd-b7a84206cd42</Id>
+          <Id>fd248e68-49b7-4241-8439-d4a317d6d22c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20012,7 +20356,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_CheckExistingAliases, wait until execution finishes</Caption>
-          <Id>5771d750-4a1d-4dca-8d64-fcf1a2356fdd</Id>
+          <Id>e3fa33db-aa5a-4bf1-8c9c-e588a413d602</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20145,7 +20489,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>bc718425-1bef-4e55-9033-b6edacdaefa0</Id>
+          <Id>a78b3568-3bd5-4e31-a4a2-952cc892fe76</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20182,7 +20526,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>2ab954b2-6afa-49e7-9c89-dc260e11c146</Id>
+          <Id>08446c61-ab54-41a8-bca6-830fffc39c2f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20219,7 +20563,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>0b4117c1-a750-4683-adca-507442b47e3d</Id>
+          <Id>53c77c77-b2b0-4aef-9fb7-5be9c5d4c5dd</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20256,7 +20600,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>ec6631cb-be7b-410c-92dc-6419741ca20a</Id>
+          <Id>8f8f81fa-8a0b-41f2-b66a-bfc2f7578aef</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20293,7 +20637,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_CheckEditedAliases  -- Checks edited alias input againt existing commands for duplicates</Caption>
-          <Id>2d1f4811-97c0-44f4-bed8-0a1cd0897793</Id>
+          <Id>c05f1a8d-a31e-4e5e-9674-39a7fdfebecc</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20330,7 +20674,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>fc30330c-dc23-4381-9678-98eb81b892df</Id>
+          <Id>3b0b7974-4b33-421c-bf4c-b28e9a02af25</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20367,7 +20711,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>6d397532-bc87-474f-b03b-1361d07c6be5</Id>
+          <Id>4f07496a-c814-49e4-a68f-503b46690c56</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20404,7 +20748,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>9d5033b7-f33b-4bcc-961c-9af4ef6daaa2</Id>
+          <Id>0a410b6b-1e3c-401c-81bc-2bfc4609bb87</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20441,7 +20785,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_CheckEditedAliases, wait until execution finishes</Caption>
-          <Id>4f25d103-e42c-404a-8137-d35c25c5e0ee</Id>
+          <Id>1d7f880e-1abc-4943-89c9-db7fc2bd8c4f</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20594,7 +20938,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>9fabbbdb-2c12-4105-8209-2d65472ea948</Id>
+          <Id>3d5cc62f-61ad-4447-bfd6-c47211cbdcb4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20631,7 +20975,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>baf78212-a556-4d73-b676-c5d8c50aa655</Id>
+          <Id>4b1b5676-aebe-48f9-bd78-260527bcc1eb</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20668,7 +21012,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>8e33299f-9d67-4696-9e3f-dcdec7868b28</Id>
+          <Id>038ad214-a5bd-4e14-8359-8e3e5c0115cc</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20705,7 +21049,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>f6e4309b-514d-4349-b63c-8566dbfacb35</Id>
+          <Id>d5106b42-120e-4ce2-980c-9c49c629735e</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20742,7 +21086,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_SaveAliasKeys  -- Extract dynamic aliases to create individual key for each one - including populating the SFS Save Variable/Value for them</Caption>
-          <Id>f9a1d15e-f838-42d8-9f6f-004140f7cb2a</Id>
+          <Id>d65d486c-277c-47f4-b398-1d54ce443bf3</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20779,7 +21123,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>ecc39715-d405-4c79-b7a4-19bc9584dbde</Id>
+          <Id>7012b11d-5bfc-4419-a1ac-5c3301710e1f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20816,7 +21160,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>93e639a7-7192-42dd-97da-5a533b8c9891</Id>
+          <Id>41bcf857-188b-4c4e-bcd8-c72aa8ffad86</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20853,7 +21197,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>ca37a29e-3baa-4778-819b-862348b4b187</Id>
+          <Id>9ae2aefb-b9c9-4185-8cea-509529d56eae</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -20890,7 +21234,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_SaveAliasKeys, wait until execution finishes</Caption>
-          <Id>71323a9b-8b21-46e6-9847-5f323aee22d7</Id>
+          <Id>35ea95a4-3125-429c-a9e5-48d3ba47475f</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21007,7 +21351,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>6e0bcd36-dc90-4c51-9ff7-64e2d36af022</Id>
+          <Id>7c6a6f73-4db8-498b-921e-01ccbc0f295c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21044,7 +21388,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>fb71ebbe-31cc-4580-8db0-c29ea806c471</Id>
+          <Id>84437a41-d5cc-4691-861a-ce88eb039a5d</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21081,7 +21425,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>6914a15c-a792-4569-b374-2562727d5ae8</Id>
+          <Id>fdbdc29b-9faf-43bd-9637-c9344a556f3b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21118,7 +21462,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>f2882512-761f-4d59-bc09-3f8a17bec9ee</Id>
+          <Id>fd79a218-6c7e-4954-bf3e-e5718c7a4b5c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21155,7 +21499,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_SaveAliasCommands  -- Append new (potentially dynamic) phrase alias(es) to end of existing or empty commands variable</Caption>
-          <Id>5ec0c777-fa95-43d9-ac3d-bef87c14db28</Id>
+          <Id>ad65f398-d9b8-4ac3-99d9-91cf01f27e0f</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21192,7 +21536,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>2b277a05-7996-4b96-b490-3ec17fd938c6</Id>
+          <Id>fcc3f845-400e-476d-9bd6-38be435ab478</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21229,7 +21573,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>b72652ac-8211-4d29-ae79-787dbd8e9bec</Id>
+          <Id>9ab0ca19-cccb-44c8-99db-f2cb453ad1f5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21266,7 +21610,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>151f235f-ab36-4299-b4d4-d025259b0f00</Id>
+          <Id>889dfc63-4075-439d-bbe3-99d27d7a0c0a</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21303,7 +21647,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_SaveAliasCommands, wait until execution finishes</Caption>
-          <Id>272073ec-8bda-4f47-add1-c9d59bdd19ae</Id>
+          <Id>c892b14a-385f-4c82-82e8-2f02420a0387</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21422,7 +21766,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>ee6ef480-7790-4433-9d82-8a44161d95d4</Id>
+          <Id>3162f37d-0100-46a2-a275-921118747958</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21459,7 +21803,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>55ef618b-ddbf-46b0-9503-08e006ed0b1b</Id>
+          <Id>33554501-bbf7-4033-bcee-5b4bbddd181b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21496,7 +21840,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>a47ce352-dfff-48e5-879d-1c1bee8aa8a9</Id>
+          <Id>c8e20e6d-f24d-40e8-975b-1b9857acf167</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21533,7 +21877,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>78fe52e3-866d-4867-abcd-9151b54e9a88</Id>
+          <Id>6335edd1-d23b-42a2-9539-6602372c9bfe</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21570,7 +21914,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_DeleteAliasKeys  -- For-each to set key variables to be deleted from user save file</Caption>
-          <Id>870c01fc-d402-481d-9464-adb9436ed74f</Id>
+          <Id>a795e634-a96d-4c8d-bfb9-36e64631e46b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21607,7 +21951,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>e895872f-4dac-45bf-b3cb-c5ef9efed107</Id>
+          <Id>355cc760-ad2c-4193-ab81-3bb5629ab9b5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21644,7 +21988,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>27ef9560-2d9b-4ef4-8c53-9685a3bf9564</Id>
+          <Id>74855f15-6aef-47b7-8a35-d34077490dac</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21681,7 +22025,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>3f88ffd3-1f4c-4404-a308-15ca0e88f03e</Id>
+          <Id>6b15e4f8-6203-4874-9a6c-75eb2591ffd3</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21718,7 +22062,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_DeleteAliasKeys, wait until execution finishes</Caption>
-          <Id>4977cb6d-7200-4194-87fb-fc8968e43c9c</Id>
+          <Id>44a64d71-5a59-4871-8651-a7ea3cce7ce3</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21830,7 +22174,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>9576db4d-4406-4f0d-9675-a2e8d278281c</Id>
+          <Id>84deda60-acc9-4df3-a4ba-a8b871644fc4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21867,7 +22211,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>4ae815fe-fa83-49a2-ba4b-30988ea162d8</Id>
+          <Id>f8910011-2828-4085-b5f6-85c3aca35e1b</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21904,7 +22248,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>d21d6b33-4162-4b46-b752-72bac882d34b</Id>
+          <Id>9a36e521-16f9-4b70-bb19-3334176751e8</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21941,7 +22285,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>f5988113-06a3-473e-9419-b2cfea470f3a</Id>
+          <Id>e7725e0b-b813-48a0-abd4-d7490444d831</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21978,7 +22322,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_DeleteAliasCommands  -- Delete (potentially dynamic) phrase alias(es) from existing commands variable (if any)</Caption>
-          <Id>9552c520-9c7e-4a54-b37e-2c3690bc91bd</Id>
+          <Id>26f9f1b4-132a-44c0-acb1-f3444a4d4904</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22015,7 +22359,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>3e59384e-849e-4023-b8da-a9ab307f99db</Id>
+          <Id>86e9a6fb-e7ba-4bee-92bb-c081c4891b8a</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22052,7 +22396,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>9908bdfa-5b8b-4966-b6be-847d8d440752</Id>
+          <Id>c6e34444-089b-4199-995c-562acee9aca5</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22089,7 +22433,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    YES</Caption>
-          <Id>86ca95f9-5450-4748-85e7-97655c547d00</Id>
+          <Id>e7731e2a-7f23-4365-aff0-ffa22e0ba425</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22126,7 +22470,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline C# Function: AVCS4_BMS_DeleteAliasCommands, wait until execution finishes</Caption>
-          <Id>71d55a61-8787-4e3c-877b-8c4b36238750</Id>
+          <Id>727bc76b-7471-4bb7-8a93-58ceac1b72a5</Id>
           <ActionType>InlineFunctionCS</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22252,7 +22596,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>b3b17a20-1f44-4b9f-b986-b4f37913db8f</Id>
+          <Id>ed920eee-d138-4795-aea1-787b5eddcd44</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22289,7 +22633,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>1266e8e2-aaf7-4f62-931c-7072cfbd8fb7</Id>
+          <Id>ae384ced-3931-429b-b8e9-095e601f3762</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22326,7 +22670,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>305995d0-0cad-4c76-910c-01cfe370f39c</Id>
+          <Id>f71018f7-f8bd-4444-81b2-cf24416aa7b6</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22363,7 +22707,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>0dbd35cb-733b-40e4-be60-c73adda0baff</Id>
+          <Id>d513d053-e55a-4a54-a518-92bf6893d5ed</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22400,7 +22744,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  AVCS4_BMS_LocalizeDecimalsText  -- Update existing text variables containing decimal value choices with current culture decimal separator during profile init</Caption>
-          <Id>04f10a58-4d8a-41a5-a03e-45ee5dde048e</Id>
+          <Id>3e1f9666-650a-4083-8307-13a21601d9a4</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22437,7 +22781,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  REQUIRED SETTINGS:</Caption>
-          <Id>1f5c5317-25a6-4849-89f2-a962a73ade3d</Id>
+          <Id>d3c8d52b-185c-4d47-a35c-cd08163a712c</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22474,7 +22818,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Wait for the inline function to finish before continuing:   YES</Caption>
-          <Id>eb2f53c4-eaed-4e25-a65a-6b1e3daa948d</Id>
+          <Id>fc05cabf-5403-40d0-8f2c-d4b55c46bf63</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22511,7 +22855,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>//  Retain instance:    NO</Caption>
-          <Id>afb21cf0-813b-47ad-b416-82a26d200631</Id>
+          <Id>ddfc8794-5dcd-4148-8c54-91e1aaecd378</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22548,7 +22892,7 @@ public class VAInline
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>DISABLED - Inline VB Function: AVCS4_BMS_LocalizeDecimalsText, wait until execution finishes</Caption>
-          <Id>bd7e07b8-1323-4a75-bc0d-ea1965545f24</Id>
+          <Id>8d6435e3-d612-4dac-8257-c4ed5f4bc978</Id>
           <ActionType>InlineFunctionVB</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22639,7 +22983,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>_____________________________________________________________________________________________</Caption>
-          <Id>a65b3b49-392f-48b5-8d05-85bbc6385f13</Id>
+          <Id>03c5f699-9880-4c6e-8b0b-8099a81c4f39</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22676,7 +23020,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>61a1acd8-be29-4f2c-8ac9-358cb9b8f68f</Id>
+          <Id>f58b4b30-0b29-4760-aedf-4d17de82a0a7</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22713,7 +23057,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>ac796d1a-96e4-48e7-adb1-096ef0d53bad</Id>
+          <Id>5f41d29c-f1d1-4038-afc9-6fbe220d35ef</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22750,7 +23094,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption>/////////////////////////////////////////////////////////////////////////////////////////////////</Caption>
-          <Id>f4f06e27-b5c7-4faa-9be1-d401f178abc0</Id>
+          <Id>4e5ae49a-ce8b-4575-86aa-46b5888e13fa</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22787,7 +23131,7 @@ End Class</Context>
           <IsSuffixAction>false</IsSuffixAction>
           <DecimalTransient1>0</DecimalTransient1>
           <Caption />
-          <Id>deae74ba-64b3-48ac-ae35-d459d0aca2cf</Id>
+          <Id>0e7f842a-fb48-4536-ba0a-e93276c71450</Id>
           <ActionType>Comment</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -22858,7 +23202,7 @@ End Class</Context>
       <MouseUpOnly>false</MouseUpOnly>
       <MousePassThru>true</MousePassThru>
       <joystickExclusive>false</joystickExclusive>
-      <lastEditedAction>36fbbdad-25dd-4c0e-b7bb-105030e9287d</lastEditedAction>
+      <lastEditedAction>3bdba1e8-47bd-4a5c-a8db-d5045c206f1a</lastEditedAction>
       <UseProfileProcessOverride>false</UseProfileProcessOverride>
       <ProfileProcessOverrideActiveWindow>false</ProfileProcessOverrideActiveWindow>
       <RepeatIfKeysDown>false</RepeatIfKeysDown>
@@ -22924,7 +23268,7 @@ End Class</Context>
   <CatchAllEnabled>false</CatchAllEnabled>
   <CatchAllId xsi:nil="true" />
   <InitializeCommandEnabled>true</InitializeCommandEnabled>
-  <InitializeCommandId>1f1527c5-4882-4cf6-b91f-e780167e9c6d</InitializeCommandId>
+  <InitializeCommandId>2ab7ae26-950c-46af-9129-b275b52b0c68</InitializeCommandId>
   <UseProcessOverride>true</UseProcessOverride>
   <ProcessOverride />
   <ProcessOverrideAciveWindow>true</ProcessOverrideAciveWindow>
