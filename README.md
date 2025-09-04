@@ -78,27 +78,27 @@ First, download the `AVCS CORE (2.0).zip` package from the link below - never do
 ### Checksum
 ```
 ================================================
-Checksum Date/Time: 8/25/2025 6:52:02 PM
+Checksum Date/Time: 9/1/2025 7:19:54 PM
 Package Version: 2.0.0.0
 Package Name: AVCS CORE (2.0).zip
-Package Size: 1115507 (bytes) (1.06 MB)
+Package Size: 1112998 (bytes) (1.06 MB)
 
-SHA1:   8205ac8e4538a428b701cab8e2714708b37b5b0e
-SHA256: e08e0b67ae08451da1f4099304e5cb4d384678017e5e5d573d342430fabf71eb
-SHA384: 1e19d2e5a7811b5b7028143c219c8eecb441baacd1910a860a50d1c38b00bfcb5d26f58dd5c5ee609497f912c5f46400
-SHA512: 4bfe113eaf53937bf00e179483628eb5f0946c49b64094db31d837f5f19dca819effc6e1f0fc1805bead8fb3c628610109dfdc4e4e8a1f5a24dd16f64c2970fe
+SHA1:   8992236017ae8860737325d1209069cbb521a5f4
+SHA256: 5b10d0dd547aac10245e5e64358783c31464f63cd4f734f2bda74fb8415b62d1
+SHA384: c9322f40c79655ccbefda0a58d863bf18393d92808c9f22a58c0cbcb0f1505365072d27abe3f7f9dac942f5b49e2da89
+SHA512: 7520de5ea74cd2271f3f0bf223551705d84e246efd65d30b7b6a5c2c4c8467f6952a0b078fb209cf109c5b2974814a2dcba4cc01c17d103fd31860a3524858bb
 ================================================
 
 ================================================
-Checksum Date/Time: 8/25/2025 6:52:02 PM
+Checksum Date/Time: 9/1/2025 7:19:54 PM
 File Version: 2.0.0.0
 File Name: AVCS CORE (v2.0) Profile (IMPORT THIS).vax
-File Size: 1000501 (bytes) (0.95 MB)
+File Size: 982029 (bytes) (0.94 MB)
 
-SHA1:   cf0521973f157e3bec18febcea9f77bf5faad61a
-SHA256: c1eee7e33d4de81f5930bb0a2581bb865ad76e5f0b2166496911ea16e7fba028
-SHA384: 840a63e534f3f7bf05dab251767c25638b1b28cd05a5569c666567be0e8e9c707aa125543296ff89344ff82743b45989
-SHA512: 94e991d16f373d86c70fe2d692edd9b75a35725a151f9f4870a9cf1100eea703ad18954fb2d71cf67266b8b5af4f60b86e643feb98c1c6631ed84fac812358da
+SHA1:   4bd71e2f3db2ca760018ec1fb5516dff78d6a003
+SHA256: f349d48fa2158e311e81f40608f6ff26de0f08a44d365e6dbb7d0b0373ae4f36
+SHA384: 09a56b421807049380ffed6452f7ccc8763123dbaf5df89d5850843cce443b1da0cfc930807116166c486846154fdb5d
+SHA512: a2fae5e0201cfa384b62a5e01ecaf7f65f0dca8216b25b342f45abf50ba4858fd8ce6d93e2e77dc90dd58e8a465741ec0cef69361aac1abd5ad783671beecfa5
 ================================================
 ```
 
